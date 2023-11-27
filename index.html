@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <title>Ed Aboga - Web Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="./assets/style.css" charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="./assets/fa/css/all.min.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script id="main-template" type="text/x-handlebars-template">
+        {{> overlay_hint}}
+        {{> modal_overlay}}
+        {{> container_overlay}}
+        {{> front_page }}
+        {{> projects_page }}
+    </script>
+
+    <script id="front_page-partial" type="text/x-handlebars-partial">
+        <div id="top" class="fx-col front-page fp">
+            <div class="fx content-body">
+                <div class="fx cb-text txt-c">
+                    <div class="fx-col my-title">
+                        <div class="my-name typer"> {{ name }} </div>
+                        <div class="separator"></div>
+                        <div class="my-role"> {{ role }} </div>
+                    </div>
+                    <div class="fx wrap my-nav txt-c">
+                        {{#each options }}
+                            <div class="my-{{toLowerCase name}}">
+                                {{#if url }} <a href="{{url}}" target="{{target}}">
+                                {{/if}}
+                                    <i class="{{icon}}"></i>
+                                    <span>{{name}}</span>
+                                {{#if url }} </a>
+                                {{/if}}
+                            </div>
+                        {{/ each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+    <script id="projects_page-partial" type="text/x-handlebars-partial">
+        <div class="fx-col wrap content-page">
+            <div id="works" class="fx content-body works center">
+                <div class="fx cb-text">
+                    <div class="fs-title txt-c">
+                        {{#with options.projects}}
+                            <i class="{{icon}}"></i>
+                            <span>{{name}}</span>
+                        {{/with}}
+                    </div>
+                    <div class="projects-content">
+                        {{#each projects}}
+                            {{> image_slider}}
+                            {{> project_details}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="square-lining"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="image_slider-partial" type="text/x-handlebars-partial">
+        <div class="rounded-container {{ref}}">
+            <div class="img-slider">
+                <div class="img-slider-content">
+                    <div class="background"></div>
+                    <div class="slides">
+                        {{#times count}}
+                        <img src="./assets/works/{{../ref}}{{this}}.jpg">
+                        {{/times}}
+                    </div>
+                </div>
+                {{#unless (isTrue count 1) }}
+                    <div class="img-slider-btn left">
+                        {{> icons icon=@root.icons.chevron_left}}
+                    </div>
+                    <div class="img-slider-btn right">
+                        {{> icons icon=@root.icons.chevron_right}}
+                    </div>
+                {{/unless}}
+            </div>
+        </div>
+    </script>
+
+    <script id="project_details-partial" type="text/x-handlebars-partial">
+        <div class="projects-description">
+            <div class="title"> {{title}} </div>
+            <div class="detail">
+                {{> icons icon=@root.icons.chevron_right}}
+                <span>
+                    {{#each list}} {{this}}
+                        {{#unless @last}} <br>
+                        {{/unless}}
+                    {{/each}}
+                </span>
+            </div>
+
+            <div class="links">
+                {{#if url}}
+                    {{#with url}}
+                        <a href="{{visit}}" target="{{target}}">
+                            {{> icons icon=@root.icons.eye}}
+                            {{@root.visit}}
+                        </a>
+                        <a href="{{code}}" target="_blank">
+                            {{> icons icon=@root.icons.code}}
+                            {{@root.code}}
+                        </a>
+                    {{/with}}
+                {{/if}}
+                <div class="stack">
+                    {{> icons icon=@root.icons.file}}
+                    <span>{{stack}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="overlay_hint-partial" type="text/x-handlebars-partial">
+        <div class="page-hint move-udi txt-c">
+            <div class="ph scroll-down">
+                <div class="ph-content">
+                    {{> icons icon=icons.mouse}}
+                    <span>{{hint.scroll_down}}</span>
+                </div>
+            </div>
+            <div class="ph scroll-up hide-hint">
+                <div class="ph-content">
+                    <a href="#top">
+                        {{> icons icon=icons.arrow_up}}
+                        <span>{{hint.scroll_top}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="modal_overlay-partial" type="text/x-handlebars-partial">
+        <div class="modal-overlay hidden">
+            {{#each modal}}
+                {{> modal}}
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="modal-partial" type="text/x-handlebars-partial">
+        <div class="modal modal-{{@key}} hidden">
+            <div class="btn-close">
+                {{> icons icon=@root.icons.close}}
+            </div>
+            <div class="text-group">
+                <span>{{header}}</span>
+                <hr>
+                {{#if address}}
+                    <a class="text-link" href="mailto:{{address}}" target="_blank">{{address}}</a>
+                {{else}}
+                    <div class="btn-group">
+                        {{#each list}}
+                            <a href="{{url}}" target="_blank">
+                                <button class="btn">{{name}}</button>
+                            </a>
+                        {{/each}}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </script>
+
+    <script id="container_overlay-partial" type="text/x-handlebars-partial">
+        <div class="container-overlay">
+            <div class="notice">
+                <div class="text">
+                    {{hint.zoom}}
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="icons-partial" type="text/x-handlebars-partial">
+        <i class="{{icon}}"></i>
+    </script>
+
+
+    <script type="text/javascript" src="./assets/handlebars.min-v4.7.8.js"></script>
+    <script type="text/javascript" src="./assets/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
