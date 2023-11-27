@@ -19,7 +19,6 @@ jQuery(function () {
     Object.keys(sliders).forEach((key) => imageSlider(key).setBackground());
 
     $(document).ready(() => $(window).scrollTop(0));
-    $(window).on('beforeunload', () => $(window).scrollTop(0));
 
     Object.keys(sliders).forEach((key) => {
         $('body').on('click', '.' + key + ' .img-slider-btn', function (event) {
