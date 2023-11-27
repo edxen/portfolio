@@ -158,12 +158,12 @@
         {{#each org}}
             <div class="{{#if @first}}last{{/if}} text-sm">
                 <div class="flex">
-                    <div class="flex basis-3/4 items-center font-bold">
+                    <div class="flex w-fit items-center font-bold">
                         {{who}}
-                        {{#if altWho}} <span class="font-normal ml-1 text-xs">(formerly {{altWho}})</span>
+                        {{#if altWho}} <span class="font-normal w-fit ml-1 text-xs">(formerly {{altWho}})</span>
                         {{/if}}
                     </div>
-                    <div class="flex basis-1/4 items-center justify-end flex-nowrap text-xs">{{where}}</div>
+                    <div class="flex w-fit items-center flex-grow justify-end flex-nowrap text-xs">{{where}}</div>
                 </div>
                 <hr class="ml-2">
                 {{> roles}}
