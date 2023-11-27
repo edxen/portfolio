@@ -16,12 +16,12 @@ const texts = {
             link: 'mailto:edabogajr@gmail.com'
         },
         portfolio: {
-            name: 'Portfolio',
+            name: 'edxen.github.io/portfolio : Portfolio',
             icon: 'fa-solid fa-briefcase',
             link: 'https://edxen.github.io/portfolio'
         },
         github: {
-            name: 'Github',
+            name: 'github.com/edxen : Github',
             icon: 'fa-brands fa-github',
             link: 'https://github.com/edxen'
 
@@ -113,7 +113,7 @@ const texts = {
                         duration: 'Dec 2015 to Apr 2018',
                         list: [
                             'Took inbound calls and answer emails to assist users in getting connected to site network',
-                            'dWrote myriad of javascript bookmarklets turning data collection and URL access into a one click process',
+                            'Wrote myriad of javascript bookmarklets turning data collection and URL access into a one click process',
                             'Ad Hoc as Programmer for Training Department; Developed troubleshooting tool with automated documentation using Visual Basic .NET and MySQL'
                         ]
                     }

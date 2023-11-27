@@ -54,7 +54,7 @@
     </script>
 
     <script id="basic-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-col basis-4/5 items-left justify-center">
+        <div class="flex flex-col basis-3/5 items-left justify-center">
             <div class="flex flex-col basis-full justify-center">
                 <div class="text-3xl">{{ name }}</div>
                 <div class="text-xl">{{ role }}</div>
@@ -63,7 +63,7 @@
     </script>
 
     <script id="info-partial" type="text/x-handlebars-partial">
-        <div class="flex basis-1/5 justify-center items-end flex-col text-sm">
+        <div class="flex basis-2/5 justify-center items-end flex-col text-sm">
             {{#each info}}
             <div class="flex flex-nowrap items-center pb-1">
                 {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
