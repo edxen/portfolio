@@ -18,7 +18,7 @@ const texts = {
         portfolio: {
             name: 'Portfolio',
             icon: 'fa-solid fa-briefcase',
-            link: 'https://github.edxen.io/portfolio'
+            link: 'https://edxen.github.io/portfolio'
         },
         github: {
             name: 'Github',
