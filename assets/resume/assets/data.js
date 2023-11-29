@@ -20,12 +20,6 @@ const texts = {
             icon: 'fa-solid fa-briefcase',
             link: 'https://edxen.github.io/portfolio'
         },
-        github: {
-            name: 'github.com/edxen : Github',
-            icon: 'fa-brands fa-github',
-            link: 'https://github.com/edxen'
-
-        },
     },
     summary: {
         title: 'Career Summary',
@@ -67,6 +61,8 @@ const texts = {
             list: [
                 'Adobe Photoshop',
                 'C++',
+                'REST API',
+                'PHP',
                 'MySQL',
                 'Visual Basic / .NET',
                 'Shell Script',
@@ -92,29 +88,30 @@ const texts = {
                         title: 'Senior Web Design and Development Associate',
                         duration: 'Oct 2019 to January 2023',
                         list: [
-                            'Transforms web design mockups into functional API integrated web site to serve as captive portal over Cloud using HTML, CSS, Bootstrap, Flexbox, Javascript, jQuery and Handlebars',
-                            'Ensure responsive design and functionality are cross-browser compatible with web and mobile devices',
-                            'Responsible for maintaining, adding and modifying existing sites based on client requirements',
-                            'Maintains content translation management for 14 languages with JSON and jq',
-                            'Actively leads improvement with release cycle to improve efficiency in addressing both short and long term deliverable in a timely sense'
+                            "Translate web design mockups into operational API-integrated websites for Cloud-based captive portals utilizing HTML, CSS, Bootstrap, Flexbox, JavaScript, jQuery, and Handlebars.",
+                            "Guarantee cross-browser compatibility and responsive design across web and mobile platforms.",
+                            "Manage, update, and customize existing sites to meet client specifications.",
+                            "Oversee content translation management for 14 languages using JSON and jq.",
+                            "Spearhead enhancements within release cycles to optimize efficiency for timely delivery of short and long-term goals."
                         ]
                     },
                     {
                         title: 'Web Design Associate',
                         duration: 'Apr 2018 to Oct 2019',
                         list: [
-                            'Transformed web design mockups into functional web site that serves as captive portal with only modifying CSS in a default site template',
-                            'Maintained content translation management for 13 languages under Django',
-                            'Introduced script injection using Javascript to allow more customized and flexible site designs'
+                            "Transformed web design mockups into a functional website, serving as a captive portal by exclusively modifying CSS within a default site template.",
+                            "Managed content translation across 13 languages within Django framework.",
+                            "Implemented script injection using JavaScript, enabling greater flexibility and customization in site designs."
                         ]
+
                     },
                     {
                         title: 'Technical Support Representative',
                         duration: 'Dec 2015 to Apr 2018',
                         list: [
-                            'Took inbound calls and answer emails to assist users in getting connected to site network',
-                            'Wrote myriad of javascript bookmarklets turning data collection and URL access into a one click process',
-                            'Ad Hoc as Programmer for Training Department; Developed troubleshooting tool with automated documentation using Visual Basic .NET and MySQL'
+                            "Handled inbound calls and responded to emails, aiding users in connecting to the site network.",
+                            "Developed a variety of JavaScript bookmarklets to streamline data collection and simplify URL access into a one-click process.",
+                            "Acted as an ad hoc programmer for the Training Department, creating a troubleshooting tool with automated documentation using Visual Basic .NET and MySQL."
                         ]
                     }
                 ]

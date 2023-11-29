@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <div id="root"></div>
 
     <script id="main-template" type="text/x-handlebars-template">
@@ -199,7 +199,15 @@
     </script>
 
     <script src="./assets/handlebars.min-v4.7.8.js" type="text/javascript"></script>
-    <script src="./assets/index.js" type="text/javascript"></script>
+    <script src="./assets/data.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
+        partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace('-partial', ''), partial.innerHTML));
+        const source = document.querySelector('#main-template').innerHTML;
+        const destination = document.querySelector('#root');
+        destination.innerHTML = Handlebars.compile(source)(texts);
+    </script>
 </body>
 
 </html>
