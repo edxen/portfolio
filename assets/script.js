@@ -3,7 +3,6 @@ let counting = true;
 const sliders = {};
 const counter = {};
 
-
 fetch('./assets/data.json')
     .then(response => response.json())
     .then(data => {
