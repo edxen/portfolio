@@ -86,6 +86,11 @@ a {
     flex-direction: column;
 }
 
+.fx-center {
+    justify-content: center;
+    align-items: center;
+}
+
 .fx.wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;

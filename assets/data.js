@@ -81,6 +81,20 @@ const data = {
             "stack": "HTML5, CSS3, Bootstrap 4/5, jQuery, Handlebars"
         },
         {
+            "title": "Intertouch Passpoint Guest Account Portal Demo ",
+            "ref": "passpoint",
+            "count": 3,
+            "list": [
+                "Portal page I developed to showcase improved UX flow over existing Passpoint Guest Account Portal page with the goal of increasing user conversion rate",
+            ],
+            "url": {
+                "visit": "https://edxen.github.io/passpoint_demo",
+                "target": "_blank",
+                "code": "https://github.com/edxen/passpoint_demo"
+            },
+            "stack": "HTML5, Bootstrap 5.2, Handlebars"
+        },
+        {
             "title": "Food Management App",
             "ref": "food",
             "count": 6,
