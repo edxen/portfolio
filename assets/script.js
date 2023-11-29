@@ -3,70 +3,31 @@ let counting = true;
 const sliders = {};
 const counter = {};
 
-data.projects.forEach((project) => {
-    sliders[project.ref] = 0;
-    counter[project.ref] = 0;
-});
+
+fetch('./assets/data.json')
+    .then(response => response.json())
+    .then(data => {
+        start(data);
+    })
+    .catch(error => {
+        console.error('Error fetching the JSON file:', error);
+    });
+
+const start = (data) => {
+    setHandlebars(data);
+
+    data.projects.forEach((project) => {
+        sliders[project.ref] = 0;
+        counter[project.ref] = 0;
+    });
+
+    setImageSliderEvents();
+    setModalEvents();
+};
 
 jQuery(function () {
-    Object.keys(sliders).forEach((key) => imageSlider(key).setBackground());
-
     $(document).ready(() => $(window).scrollTop(0));
-
-    Object.keys(sliders).forEach((key) => {
-        $('body').on('click', '.' + key + ' .img-slider-btn', function (event) {
-            if ($(this).hasClass('right')) imageSlider(key).right();
-            if ($(this).hasClass('left')) imageSlider(key).left();
-        });
-        $('body').on('click', '.' + key + ' .img-slider-content', (event) => imageSlider(key).zoom());
-        $('.' + key + ' .img-slider').on('touchstart', (e) => startX = e.originalEvent.touches[0].pageX);
-        $('.' + key + ' .img-slider').on('touchmove', (e) => {
-            const startX = $(this).data('startX');
-            const startY = $(this).data('startY');
-            const moveX = e.originalEvent.touches[0].pageX;
-            const moveY = e.originalEvent.touches[0].pageY;
-            const distanceX = Math.abs(moveX - startX);
-            const distanceY = Math.abs(moveY - startY);
-
-            if (distanceX > distanceY) e.preventDefault();
-        });
-        $('.' + key + ' .img-slider').on('touchend', function (e) {
-            endX = e.originalEvent.changedTouches[0].pageX;
-            let distanceX = endX - startX;
-            if (Math.abs(distanceX) > 50) {
-                if (distanceX > 10) imageSlider(key).left();
-                else if (distanceX < 10) imageSlider(key).right();
-            }
-        });
-    });
-
-
-    $('.container-overlay').on('click', (event) => {
-        $('body').removeClass('overlay');
-        $('*').css('scroll-behavior', 'auto');
-        window.scrollTo({ top: scrollPosition, behavior: 'auto' });
-        $('*').css('scroll-behavior', '');
-        counting = true;
-    });
-
-    const closeModal = () => {
-        ['overlay', 'resume', 'contact'].forEach((item) => {
-            $('.modal-' + item + '').addClass('hidden');
-        });
-    };
-    $('.modal-overlay').on('click', (event) => ($(event.target).hasClass('modal-overlay') || $(event.target).hasClass('btn')) && closeModal());
-    $('.modal-overlay .btn-close').on('click', (event) => closeModal());
-
-    $('.front-page .my-resume').on('click', (event) => {
-        $('.modal-overlay').removeClass('hidden');
-        $('.modal-overlay .modal-resume').removeClass('hidden');
-    });
-
-    $('.front-page .my-contact').on('click', (event) => {
-        $('.modal-overlay').removeClass('hidden');
-        $('.modal-overlay .modal-contact').removeClass('hidden');
-    });
-
+    Object.keys(sliders).forEach((key) => imageSlider(key).setBackground());
 
     window.onscroll = function (e) {
         if (this.oldScroll > this.scrollY) { //scrolling up
@@ -160,10 +121,67 @@ Handlebars.registerHelper('times', function (n, block) {
     return accum;
 });
 
-const texts = data;
+const setImageSliderEvents = () => {
+    Object.keys(sliders).forEach((key) => {
+        $('.' + key + ' .img-slider-btn').on('click', function (event) {
+            if ($(this).hasClass('right')) imageSlider(key).right();
+            if ($(this).hasClass('left')) imageSlider(key).left();
+        });
+        $('.' + key + ' .img-slider-content').on('click', (event) => imageSlider(key).zoom());
+        $('.' + key + ' .img-slider').on('touchstart', (e) => startX = e.originalEvent.touches[0].pageX);
+        $('.' + key + ' .img-slider').on('touchmove', (e) => {
+            const startX = $(this).data('startX');
+            const startY = $(this).data('startY');
+            const moveX = e.originalEvent.touches[0].pageX;
+            const moveY = e.originalEvent.touches[0].pageY;
+            const distanceX = Math.abs(moveX - startX);
+            const distanceY = Math.abs(moveY - startY);
 
-const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
-partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace('-partial', ''), partial.innerHTML));
-const source = document.querySelector('#main-template').innerHTML;
-const destination = document.querySelector('#root');
-destination.innerHTML = Handlebars.compile(source)(texts);
+            if (distanceX > distanceY) e.preventDefault();
+        });
+        $('.' + key + ' .img-slider').on('touchend', function (e) {
+            endX = e.originalEvent.changedTouches[0].pageX;
+            let distanceX = endX - startX;
+            if (Math.abs(distanceX) > 50) {
+                if (distanceX > 10) imageSlider(key).left();
+                else if (distanceX < 10) imageSlider(key).right();
+            }
+        });
+    });
+
+    $('.container-overlay').on('click', (event) => {
+        $('body').removeClass('overlay');
+        $('*').css('scroll-behavior', 'auto');
+        window.scrollTo({ top: scrollPosition, behavior: 'auto' });
+        $('*').css('scroll-behavior', '');
+        counting = true;
+    });
+};
+
+const setModalEvents = () => {
+    const closeModal = () => {
+        ['overlay', 'resume', 'contact'].forEach((item) => {
+            $('.modal-' + item + '').addClass('hidden');
+        });
+    };
+    $('.modal-overlay').on('click', (event) => ($(event.target).hasClass('modal-overlay') || $(event.target).hasClass('btn')) && closeModal());
+    $('.modal-overlay .btn-close').on('click', (event) => closeModal());
+
+    $('.front-page .my-resume').on('click', (event) => {
+        $('.modal-overlay').removeClass('hidden');
+        $('.modal-overlay .modal-resume').removeClass('hidden');
+    });
+
+    $('.front-page .my-contact').on('click', (event) => {
+        $('.modal-overlay').removeClass('hidden');
+        $('.modal-overlay .modal-contact').removeClass('hidden');
+    });
+};
+
+const setHandlebars = (data) => {
+    const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
+    partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace('-partial', ''), partial.innerHTML));
+    const source = document.querySelector('#main-template').innerHTML;
+    const destination = document.querySelector('#root');
+    destination.innerHTML = Handlebars.compile(source)(data);
+};

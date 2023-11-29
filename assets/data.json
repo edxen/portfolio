@@ -1,4 +1,4 @@
-const data = {
+{
     "name": "Eduardo Aboga Jr",
     "role": "Front End Developer",
     "hint": {
@@ -85,7 +85,7 @@ const data = {
             "ref": "passpoint",
             "count": 3,
             "list": [
-                "Portal page I developed to showcase improved UX flow over existing Passpoint Guest Account Portal page with the goal of increasing user conversion rate",
+                "Portal page I developed to showcase improved UX flow over existing Passpoint Guest Account Portal page with the goal of increasing user conversion rate"
             ],
             "url": {
                 "visit": "https://edxen.github.io/passpoint_demo",
@@ -145,4 +145,4 @@ const data = {
             "stack": "HTML5, CSS3, Flexbox, jQuery, Handlebars"
         }
     ]
-};
+}
