@@ -26,7 +26,6 @@ const start = (data) => {
 
 jQuery(function () {
     $(document).ready(() => $(window).scrollTop(0));
-    Object.keys(sliders).forEach((key) => imageSlider(key).setBackground());
 
     window.onscroll = function (e) {
         if (this.oldScroll > this.scrollY) { //scrolling up
@@ -122,6 +121,8 @@ Handlebars.registerHelper('times', function (n, block) {
 
 const setImageSliderEvents = () => {
     Object.keys(sliders).forEach((key) => {
+        imageSlider(key).setBackground();
+
         $('.' + key + ' .img-slider-btn').on('click', function (event) {
             if ($(this).hasClass('right')) imageSlider(key).right();
             if ($(this).hasClass('left')) imageSlider(key).left();
