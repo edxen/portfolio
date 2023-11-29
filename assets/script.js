@@ -1,19 +1,12 @@
-const sliders = {
-    captive: 0,
-    food: 0,
-    game: 0,
-    resume: 0,
-    portfolio: 0
-};
 let scrollPosition = [0, 0];
-let counter = {
-    captive: 0,
-    food: 0,
-    game: 0,
-    resume: 0,
-    portfolio: 0
-};
 let counting = true;
+const sliders = {};
+const counter = {};
+
+data.projects.forEach((project) => {
+    sliders[project.ref] = 0;
+    counter[project.ref] = 0;
+});
 
 jQuery(function () {
     Object.keys(sliders).forEach((key) => imageSlider(key).setBackground());
