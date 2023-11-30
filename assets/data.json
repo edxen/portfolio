@@ -19,6 +19,19 @@
         "file": "fa-solid fa-file"
     },
     "modal": {
+        "linkedin": {
+            "header": "Quick Access",
+            "list": [
+                {
+                    "name": "Profile",
+                    "url": "https://linkedin.com/in/edabogajr"
+                },
+                {
+                    "name": "Certifications",
+                    "url": "https://www.linkedin.com/in/edabogajr/details/certifications/"
+                }
+            ]
+        },
         "resume": {
             "header": "Format",
             "list": [
@@ -51,9 +64,7 @@
         },
         "linkedin": {
             "name": "LinkedIn",
-            "icon": "fa-brands fa-linkedin",
-            "url": "https://linkedin.com/in/edabogajr",
-            "target": "_blank"
+            "icon": "fa-brands fa-linkedin"
         },
         "resume": {
             "name": "Resume",

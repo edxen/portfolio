@@ -169,22 +169,21 @@ const setImageSliderEvents = () => {
 };
 
 const setModalEvents = () => {
+    const modalRef = ['linkedin', 'resume', 'contact'];
+
     const closeModal = () => {
-        ['overlay', 'resume', 'contact'].forEach((item) => {
+        ['overlay', ...modalRef].forEach((item) => {
             $('.modal-' + item + '').addClass('hidden');
         });
     };
     $('.modal-overlay').on('click', (event) => ($(event.target).hasClass('modal-overlay') || $(event.target).hasClass('btn')) && closeModal());
     $('.modal-overlay .btn-close').on('click', (event) => closeModal());
 
-    $('.front-page .my-resume').on('click', (event) => {
-        $('.modal-overlay').removeClass('hidden');
-        $('.modal-overlay .modal-resume').removeClass('hidden');
-    });
-
-    $('.front-page .my-contact').on('click', (event) => {
-        $('.modal-overlay').removeClass('hidden');
-        $('.modal-overlay .modal-contact').removeClass('hidden');
+    modalRef.forEach((key) => {
+        $('.front-page .my-' + key).on('click', (event) => {
+            $('.modal-overlay').removeClass('hidden');
+            $('.modal-overlay .modal-' + key).removeClass('hidden');
+        });
     });
 };
 

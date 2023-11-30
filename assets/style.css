@@ -541,7 +541,7 @@ body.overlay>#root>.container-overlay {
     transition: opacity 0.3s ease-in-out, visibility 0s linear;
 }
 
-.modal-resume .header {
+.modal .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -580,7 +580,7 @@ body.overlay>#root>.container-overlay {
     flex-direction: column;
 }
 
-.modal-resume .btn-group .btn {
+.modal .btn-group .btn {
     min-width: 100px;
 
     background-color: var(--white);
@@ -591,7 +591,7 @@ body.overlay>#root>.container-overlay {
     cursor: pointer;
 }
 
-.modal-resume .btn:hover {
+.modal .btn:hover {
     background-color: var(--violet);
     color: var(--white)
 }
@@ -600,7 +600,7 @@ body.overlay>#root>.container-overlay {
     width: 100%
 }
 
-.modal-contact .text-link {
+.modal .text-link {
     width: 100%;
 
     text-align: center;
