@@ -137,35 +137,26 @@ const setImageSliderEvents = () => {
             if ($(this).hasClass('left')) imageSlider(key).left();
         });
         $('.' + key + ' .img-slider-content').on('click', (event) => imageSlider(key).zoom());
-        $('.' + key + ' .img-slider').on('touchstart', (e) => startX = e.originalEvent.touches[0].pageX);
-        $('.' + key + ' .img-slider').on('touchmove', (e) => {
+
+        const imgSlider = document.querySelector('.' + key + ' .img-slider');
+        imgSlider.addEventListener('touchstart', (e) => startX = e.originalEvent.touches[0].pageX, { passive: true });
+        imgSlider.addEventListener('touchmove', (e) => {
             const startX = $(this).data('startX');
             const startY = $(this).data('startY');
             const moveX = e.originalEvent.touches[0].pageX;
             const moveY = e.originalEvent.touches[0].pageY;
             const distanceX = Math.abs(moveX - startX);
             const distanceY = Math.abs(moveY - startY);
-
             if (distanceX > distanceY) e.preventDefault();
-        });
-        $('.' + key + ' .img-slider').on('touchend', function (e) {
+        }, { passive: false });
+        imgSlider.addEventListener('touchend', function (e) {
             endX = e.originalEvent.changedTouches[0].pageX;
             let distanceX = endX - startX;
             if (Math.abs(distanceX) > 50) {
                 if (distanceX > 10) imageSlider(key).left();
                 else if (distanceX < 10) imageSlider(key).right();
             }
-        });
-        jQuery.event.special.touchstart = {
-            setup: function (_, ns, handle) {
-                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-            }
-        };
-        jQuery.event.special.touchmove = {
-            setup: function (_, ns, handle) {
-                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-            }
-        };
+        }, { passive: true });
     });
 
     $('.container-overlay').on('click', (event) => {
