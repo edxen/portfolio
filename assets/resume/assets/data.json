@@ -33,43 +33,35 @@
             "title": "Web Development",
             "list": [
                 "HTML5",
-                "CSS3",
-                "Flexbox",
-                "Bootstrap (3.2 / 5.x)",
-                "TailwindCSS",
-                "Javascript",
-                "jQuery",
-                "ReactJS",
-                "Handlebars"
-            ]
-        },
-        "version_control": {
-            "title": "Version Control",
-            "list": [
-                "Git",
-                "Sourcetree"
+                "CSS3, Flexbox, Tailwind CSS, Bootstrap (3.2/ 5.x)",
+                "Javascript, ReactJS, jQuery, Handlebars"
             ]
         },
         "project_management": {
             "title": "Project Management",
             "list": [
-                "Pivotal Tracker"
+                "Git, Sourcetree, Pivotal Tracker"
             ]
         },
         "also_experienced": {
             "title": "Also Experienced with",
             "list": [
-                "Adobe Photoshop",
-                "C++",
-                "REST API",
-                "PHP",
-                "MySQL",
-                "Visual Basic / .NET",
-                "Shell Script",
-                "jq",
-                "Google Workspace / Office Suites"
+                "Adobe Photoshop, Figma",
+                "C++, MySQL, VB, VB.NET",
+                "Node.JS, npm, REST API",
+                "PHP, Shell Script, jq",
+                "Google Workspace",
+                "Office Suites ( Excel, Access)"
             ]
         }
+    },
+    "certifications": {
+        "title": "Certifications",
+        "list": [
+            "PHP Essential Training",
+            "Node.js Essential Training / Web Servers, Tests and Deployment",
+            "Become a RESTful API Developer"
+        ]
     },
     "courses": {
         "title": "Courses",
@@ -110,7 +102,7 @@
                         "list": [
                             "Handled inbound calls and responded to emails, aiding users in connecting to the site network.",
                             "Developed a variety of JavaScript bookmarklets to streamline data collection and simplify URL access into a one-click process.",
-                            "Acted as an ad hoc programmer for the Training Department, creating a troubleshooting tool with automated documentation using Visual Basic .NET and MySQL."
+                            "Handpicked as an ad hoc programmer for the Training Department to develop a troubleshooting tool with automated documentation using VB.NET and MySQL."
                         ]
                     }
                 ]

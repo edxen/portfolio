@@ -106,6 +106,7 @@
                 <div class="font-mono font-bold text-lg">Skills</div>
                 <hr class="my-2">
                 {{> skills}}
+                {{> certifications}}
                 {{> courses}}
             </div>
         </div>
@@ -121,6 +122,17 @@
                 <hr>
             {{/each}}
         </div>
+    </script>
+
+    <script id="certifications-partial" type="text/x-handlebars-partial">
+        {{#with certifications}}
+            <div class="font-mono font-bold text-lg">{{title}}</div>
+            <hr class="my-2">
+            <ul class="list-inside text-xs">
+                {{> list list=list}}
+            </ul>
+            <hr>
+        {{/with}}
     </script>
 
     <script id="courses-partial" type="text/x-handlebars-partial">
