@@ -4,15 +4,19 @@ const sliders = {};
 const counter = {};
 
 fetch('./assets/data.json')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
     .then(data => {
         start(data);
     })
     .catch(error => {
-        console.error('Error fetching the JSON file:', error);
+        console.error('Error fetching or processing the JSON file:', error);
     });
 
 const start = (data) => {
+    console.log(data);
     setHandlebars(data);
 
     data.projects.forEach((project) => {
@@ -111,6 +115,12 @@ imageSlider = (target) => {
 
 Handlebars.registerHelper('toLowerCase', (str) => str.toLowerCase());
 
+Handlebars.registerHelper('concat', function () {
+    const args = Array.prototype.slice.call(arguments, 0, -1);
+    return args.join('');
+});
+
+
 Handlebars.registerHelper('isTrue', (a, b) => a === b);
 
 Handlebars.registerHelper('times', function (n, block) {
@@ -147,6 +157,16 @@ const setImageSliderEvents = () => {
                 else if (distanceX < 10) imageSlider(key).right();
             }
         });
+        jQuery.event.special.touchstart = {
+            setup: function (_, ns, handle) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function (_, ns, handle) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
     });
 
     $('.container-overlay').on('click', (event) => {

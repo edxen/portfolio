@@ -36,7 +36,6 @@
 }
 
 .cb-text div.fs-title {
-    color: var(--violet);
     background-color: var(--black);
     font-size: 24px;
     font-weight: bold;
