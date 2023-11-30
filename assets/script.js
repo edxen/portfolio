@@ -16,7 +16,6 @@ fetch('./assets/data.json')
     });
 
 const start = (data) => {
-    console.log(data);
     setHandlebars(data);
 
     data.projects.forEach((project) => {

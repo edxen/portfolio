@@ -1,0 +1,3 @@
+# Cache policy for all assets (change max-age as needed)
+/*
+  Cache-Control: max-age=86400, public
