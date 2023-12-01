@@ -33,14 +33,15 @@
             "title": "Web Development",
             "list": [
                 "HTML5",
-                "CSS3, Flexbox, Tailwind CSS, Bootstrap (3.2/ 5.x)",
+                "CSS3, Flexbox, TailwindCSS, Bootstrap (3.2/ 5.x)",
                 "Javascript, ReactJS, jQuery, Handlebars"
             ]
         },
         "project_management": {
             "title": "Project Management",
             "list": [
-                "Git, Sourcetree, Pivotal Tracker"
+                "Git, Sourcetree",
+                "Pivotal Tracker"
             ]
         },
         "also_experienced": {
@@ -51,15 +52,17 @@
                 "Node.JS, npm, REST API",
                 "PHP, Shell Script, jq",
                 "Google Workspace",
-                "Office Suites ( Excel, Access)"
+                "Office Suites (Excel, Access)"
             ]
         }
     },
     "certifications": {
         "title": "Certifications",
         "list": [
+            "Learning Next.js",
             "PHP Essential Training",
-            "Node.js Essential Training / Web Servers, Tests and Deployment",
+            "Node.js Essential Training",
+            "Node.js Web Servers, Tests and Deployment",
             "Become a RESTful API Developer"
         ]
     },
@@ -102,7 +105,7 @@
                         "list": [
                             "Handled inbound calls and responded to emails, aiding users in connecting to the site network.",
                             "Developed a variety of JavaScript bookmarklets to streamline data collection and simplify URL access into a one-click process.",
-                            "Handpicked as an ad hoc programmer for the Training Department to develop a troubleshooting tool with automated documentation using VB.NET and MySQL."
+                            "Handpicked as an ad hoc programmer under the Training Department to develop a troubleshooting tool with automated documentation using VB.NET and MySQL."
                         ]
                     }
                 ]
