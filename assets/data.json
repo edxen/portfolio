@@ -19,19 +19,6 @@
         "file": "fa-solid fa-file"
     },
     "modal": {
-        "linkedin": {
-            "header": "Quick Access",
-            "list": [
-                {
-                    "name": "Profile",
-                    "url": "https://linkedin.com/in/edabogajr"
-                },
-                {
-                    "name": "Certifications",
-                    "url": "https://www.linkedin.com/in/edabogajr/details/certifications/"
-                }
-            ]
-        },
         "resume": {
             "header": "Format",
             "list": [
@@ -64,11 +51,19 @@
         },
         "linkedin": {
             "name": "LinkedIn",
-            "icon": "fa-brands fa-linkedin"
+            "icon": "fa-brands fa-linkedin",
+            "url": "https://linkedin.com/in/edabogajr",
+            "target": "_blank"
         },
         "resume": {
             "name": "Resume",
             "icon": "fa-solid fa-file-lines"
+        },
+        "certifications": {
+            "name": "Certifications",
+            "icon": "fa-solid fa-certificate",
+            "url": "https://www.linkedin.com/in/edabogajr/details/certifications/",
+            "target": "_blank"
         },
         "contact": {
             "name": "Contact",

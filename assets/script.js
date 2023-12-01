@@ -169,7 +169,7 @@ const setImageSliderEvents = () => {
 };
 
 const setModalEvents = () => {
-    const modalRef = ['linkedin', 'resume', 'contact'];
+    const modalRef = ['resume', 'contact'];
 
     const closeModal = () => {
         ['overlay', ...modalRef].forEach((item) => {
