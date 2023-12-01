@@ -42,7 +42,7 @@
                     <div class="fx fx-center wrap my-nav txt-c">
                         {{#each options }}
                             <div class="my-{{toLowerCase name}}">
-                                {{#if url }} <a href="{{url}}" target="{{target}}">
+                                {{#if url }} <a href="{{url}}" target="{{target}}"  rel="noreferrer nofollower">
                                 {{/if}}
                                     <i class="{{icon}}"></i>
                                     <span>{{name}}</span>
@@ -118,11 +118,11 @@
             <div class="links">
                 {{#if url}}
                     {{#with url}}
-                        <a href="{{visit}}" target="{{target}}">
+                        <a href="{{visit}}" target="{{target}}" rel="noreferrer nofollower">
                             {{> icons icon=@root.icons.eye}}
                             {{@root.visit}}
                         </a>
-                        <a href="{{code}}" target="_blank">
+                        <a href="{{code}}" target="_blank" rel="noreferrer nofollower">
                             {{> icons icon=@root.icons.code}}
                             {{@root.code}}
                         </a>
@@ -176,7 +176,7 @@
                 {{else}}
                     <div class="btn-group">
                         {{#each list}}
-                            <a href="{{url}}" target="_blank">
+                            <a href="{{url}}" target="_blank"  rel="noreferrer nofollower">
                                 <button class="btn">{{name}}</button>
                             </a>
                         {{/each}}
