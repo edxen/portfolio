@@ -33,15 +33,19 @@
             "title": "Web Development",
             "list": [
                 "HTML5",
-                "CSS3, Flexbox, TailwindCSS, Bootstrap (3.2/ 5.x)",
-                "JavaScript, TypeScript, ReactJS, jQuery, Handlebars"
+                "CSS3, Flexbox",
+                "TailwindCSS, Bootstrap (3.2/ 5.x)",
+                "ReactJS, Node.js",
+                "JavaScript, TypeScript",
+                "jQuery, Handlebars"
             ]
         },
         "project_management": {
             "title": "Project Management",
             "list": [
                 "Git, Sourcetree",
-                "Pivotal Tracker"
+                "Pivotal Tracker",
+                "Agile Methodology"
             ]
         },
         "also_experienced": {
