@@ -24,20 +24,21 @@
     "summary": {
         "title": "Career Summary",
         "list": [
-            "Solution driven professional with over 4 years of experience in building responsive and cross-browser compatible captive portal for major hospitality chains and independent brands.",
-            "An analytical problem solver skilled at adapting to new information. With strong foundation in customer service, the importance of a job well done is well understood. "
+            "Solution driven individual with 5 years of professional experience in building responsive and cross-browser compatible captive portals for major hospitality chains and independent brands.",
+            "An analytical problem solver skilled at adapting to new information.",
+            "With strong foundation in customer service, the importance of a job well done is well understood. "
         ]
     },
     "skills": {
         "web": {
             "title": "Web Development",
             "list": [
-                "HTML5",
-                "CSS3, Flexbox",
-                "TailwindCSS, Bootstrap (3.2/ 5.x)",
+                "HTML5, CSS3, Flexbox",
                 "ReactJS, Node.js",
                 "JavaScript, TypeScript",
-                "jQuery, Handlebars"
+                "jQuery, Handlebars",
+                "TailwindCSS,",
+                "Bootstrap (3.2/ 5.x)"
             ]
         },
         "project_management": {
@@ -51,10 +52,12 @@
         "also_experienced": {
             "title": "Also Experienced with",
             "list": [
-                "Adobe Photoshop, Figma",
-                "C++, MySQL, VB, VB.NET",
-                "Node.JS, npm, REST API",
+                "Adobe Photoshop",
+                "Figma",
+                "C++, MySQL",
+                "npm, Node.JS, REST API",
                 "PHP, Shell Script, jq",
+                "VB, VB.NET",
                 "Google Workspace",
                 "Office Suites (Excel, Access)"
             ]

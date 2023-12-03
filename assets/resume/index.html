@@ -24,7 +24,7 @@
         @layer utilities {
             hr { @apply my-3 }
             ul>li { @apply flex items-center }
-            ul>li>i { @apply pr-2 text-purple-700 }
+            ul>li>i { @apply pr-2 text-gray-700 }
             ul>li.multi-line { @apply items-start }
             ul>li.multi-line>i { @apply pt-1 }
             .pro-xp { @apply pl-0 }
@@ -34,18 +34,32 @@
             .last>hr { @apply border-slate-400 }
             ::-webkit-scrollbar { @apply w-[10px] }
             ::-webkit-scrollbar-track { @apply bg-white}
-            ::-webkit-scrollbar-thumb { @apply bg-purple-700 }
+            ::-webkit-scrollbar-thumb { @apply bg-gray-700 }
             ::-webkit-scrollbar-thumb:hover { @apply bg-purple-800 }
         }
+
+        .font-inter {
+            font-family: "Inter"
+        }
+
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./assets/fonts/inter-regular.woff2') format('woff2'),
+                url('./assets/fonts/inter-regular.woff') format('woff'),
+                url('./assets/fonts/inter-regular.ttf') format('truetype'),
+                url('./assets/fonts/inter-regular.eot');
+            }
     </style>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden font-inter">
     <div id="root"></div>
 
     <script id="main-template" type="text/x-handlebars-template">
         <div class="flex flex-col min-w-[430px] h-screen max-h-screen">
-            <div class="flex justify-center border-b-2 pb-3 mb-3">
+            <div class="flex justify-center border-b-2 pb-5 mb-5">
                 <div class="flex flex-col max-w-screen-lg">
                     {{> top }}
                 </div>
@@ -60,41 +74,39 @@
     </script>
 
     <script id="top-partial" type="text/x-handlebars-partial">
-        <div class="flex basis-full p-5 pb-0">
+        <div class="flex basis-full items-center p-5 pb-0">
             {{> basic}}
-            {{> info}}
+            {{> summary}}
         </div>
-       {{> summary}}
     </script>
 
     <script id="basic-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-col basis-3/5 items-left justify-center">
+        <div class="flex basis-4/12 flex-col items-left justify-center">
             <div class="flex flex-col basis-full justify-center">
-                <div class="text-3xl">{{ name }}</div>
-                <div class="text-xl">{{ role }}</div>
+                <div class="mb-3">
+                    <div class="text-3xl">{{ name }}</div>
+                    <div class="text-xl">{{ role }}</div>
+                </div>
+                <div class="flex justify-center items-left flex-col text-sm">
+                    {{#each info}}
+                    <div class="flex flex-nowrap items-center pb-1">
+                        <div class="min-w-[20px] text-center {{this.icon}}"></div>
+                        {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
+                        {{else}} {{this.name}}
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
             </div>
-        </div>
-    </script>
-
-    <script id="info-partial" type="text/x-handlebars-partial">
-        <div class="flex basis-2/5 justify-center items-end flex-col text-sm">
-            {{#each info}}
-            <div class="flex flex-nowrap items-center pb-1">
-                {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
-                {{else}} {{this.name}}
-                {{/if}}
-                <div class="min-w-[20px] text-center {{this.icon}}"></div>
-            </div>
-            {{/each}}
         </div>
     </script>
 
     <script id="summary-partial" type="text/x-handlebars-partial">
-        <div class="text-sm px-5">
+        <div class="flex flex-col items-end basis-8/12 text-sm px-5">
             <div class="font-bold">
                 {{summary.title}}
             </div>
-            <div class="italic">
+            <div class="italic text-right">
                 {{#each summary.list}}
                 <p>
                     {{#if @first}} <i class="fa-solid fa-quote-left"></i>
@@ -111,7 +123,7 @@
     <script id="left-partial" type="text/x-handlebars-partial">
         <div class="basis-5/12 flex flex-col justify-start">
             <div class="mb-3 px-5">
-                <div class="font-mono font-bold text-lg">Skills</div>
+                <div class="font-inter font-bold text-lg">Skills</div>
                 <hr class="my-2">
                 {{> skills}}
                 {{> certifications}}
@@ -134,7 +146,7 @@
 
     <script id="certifications-partial" type="text/x-handlebars-partial">
         {{#with certifications}}
-            <div class="font-mono font-bold text-lg">{{title}}</div>
+            <div class="font-inter font-bold text-lg">{{title}}</div>
             <hr class="my-2">
             <ul class="list-inside text-xs">
                 {{> list list=list}}
@@ -145,7 +157,7 @@
 
     <script id="courses-partial" type="text/x-handlebars-partial">
         {{#with courses}}
-            <div class="font-mono font-bold text-lg">{{title}}</div>
+            <div class="font-inter font-bold text-lg">{{title}}</div>
             <hr class="my-2">
             <div class="text-sm">
                 <div class="font-bold">{{what}}</div>
@@ -166,7 +178,7 @@
         <div class="basis-full">
             <div class="pro-xp mb-3">
                 {{#with experience}}
-                    <div class="font-mono font-bold text-lg">{{title}}</div>
+                    <div class="font-inter font-bold text-lg">{{title}}</div>
                     <hr class="my-2">
                     {{> orgs}}
                 {{/with}}
