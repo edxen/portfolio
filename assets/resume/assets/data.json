@@ -34,7 +34,7 @@
             "list": [
                 "HTML5",
                 "CSS3, Flexbox, TailwindCSS, Bootstrap (3.2/ 5.x)",
-                "Javascript, ReactJS, jQuery, Handlebars"
+                "JavaScript, TypeScript, ReactJS, jQuery, Handlebars"
             ]
         },
         "project_management": {
@@ -60,9 +60,10 @@
         "title": "Certifications",
         "list": [
             "Learning Next.js",
+            "TypeScript Essential Training",
             "PHP Essential Training",
             "Node.js Essential Training",
-            "Node.js Web Servers, Tests and Deployment",
+            "Node.js Web Servers, Tests, and Deployment",
             "Become a RESTful API Developer"
         ]
     },
