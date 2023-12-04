@@ -26,7 +26,7 @@
             ul>li { @apply flex items-center }
             ul>li>i { @apply pr-2 text-gray-700 }
             ul>li.multi-line { @apply items-start }
-            ul>li.multi-line>i { @apply pt-1 }
+            ul>li.multi-line>i { @apply pt-0.5 px-1 }
             .pro-xp { @apply pl-0 }
             .pro-xp>* { @apply ml-5 mr-9 }
             .pro-xp>.last { @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg }
@@ -59,29 +59,29 @@
 
     <script id="main-template" type="text/x-handlebars-template">
         <div class="flex flex-col min-w-[430px] h-screen max-h-screen">
-            <div class="flex justify-center border-b-2 pb-5 mb-5">
+            <div class="flex justify-center border-b-2 pb-3 mb-3">
                 <div class="flex flex-col max-w-screen-lg">
                     {{> top }}
                 </div>
             </div>
             <div class="flex min-w-[430px] justify-center h-screen">
-                <div class="flex basis-full flex-row-reverse max-w-screen-lg">
-                    {{> left }}
+                <div class="flex flex-wrap sm:flex-nowrap basis-full max-w-screen-lg">
                     {{> right}}
+                    {{> left }}
                 </div>
             </div>
         </div>
     </script>
 
     <script id="top-partial" type="text/x-handlebars-partial">
-        <div class="flex basis-full items-center p-5 pb-0">
+        <div class="flex flex-wrap basis-full items-center p-5 pb-0">
             {{> basic}}
             {{> summary}}
         </div>
     </script>
 
     <script id="basic-partial" type="text/x-handlebars-partial">
-        <div class="flex basis-4/12 flex-col items-left justify-center">
+        <div class="flex flex-nowrap mb-5 sm:mb-0 sm:basis-5/12 basis-full flex-col items-left justify-center">
             <div class="flex flex-col basis-full justify-center">
                 <div class="mb-3">
                     <div class="text-3xl">{{ name }}</div>
@@ -102,11 +102,11 @@
     </script>
 
     <script id="summary-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-col items-end basis-8/12 text-sm px-5">
+        <div class="flex flex-col items-start basis-full sm:items-end sm:basis-7/12  text-sm">
             <div class="font-bold">
                 {{summary.title}}
             </div>
-            <div class="italic text-right">
+            <div class="italic text-left sm:text-right">
                 {{#each summary.list}}
                 <p>
                     {{#if @first}} <i class="fa-solid fa-quote-left"></i>
@@ -121,7 +121,7 @@
     </script>
 
     <script id="left-partial" type="text/x-handlebars-partial">
-        <div class="basis-5/12 flex flex-col justify-start">
+        <div class="basis-full sm:basis-5/12 flex flex-col justify-start">
             <div class="mb-3 px-5">
                 <div class="font-inter font-bold text-lg">Skills</div>
                 <hr class="my-2">
@@ -190,12 +190,12 @@
         {{#each org}}
             <div class="{{#if @first}}last{{/if}} text-sm">
                 <div class="flex flex-wrap">
-                    <div class="flex flex-wrap w-fit items-center font-bold">
-                        {{who}}
-                        {{#if altWho}} <span class="font-normal w-fit ml-1 text-xs">(formerly {{altWho}})</span>
+                    <div class="flex flex-col sm:flex-row flex-wrap w-full sm:w-fit items-left sm:items-center font-bold">
+                        {{who}}&nbsp
+                        {{#if altWho}}<span class="font-normal w-fit text-xs">(formerly {{altWho}})</span>
                         {{/if}}
                     </div>
-                    <div class="flex w-fit items-center flex-grow justify-end flex-nowrap text-xs">{{where}}</div>
+                    <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap text-xs">{{where}}</div>
                 </div>
                 <hr class="ml-2">
                 {{> roles}}
@@ -208,10 +208,10 @@
     <script id="roles-partial" type="text/x-handlebars-partial">
         {{#each roles}}
             <div class="flex w-full justify-between flex-wrap pl-2">
-                <div class="flex w-fit items-center font-bold">{{title}}</div>
-                <div class="flex basis-auto items-center justify-end text-xs">{{duration}}</div>
+                <div class="flex w-full sm:w-fit items-center font-bold">{{title}}</div>
+                <div class="flex basis-auto items-center justify-start sm:justify-end text-xs">{{duration}}</div>
                 <div class="flex basis-full pl-2">
-                    <ul class="ml-4 list-inside text-xs pt-2">
+                    <ul class="list-inside text-xs pt-2">
                     {{> list list=list}}
                     </ul>
                 </div>
