@@ -78,7 +78,9 @@
             "list": [
                 "Aimed to showcase a streamlined login experience through different login options.",
                 "Developed under TypeScript and Next.js focusing on multi page layout and data persistence between pages.",
-                "Also incorporated API calls to Firebase for efficient data retrieval and storage."
+                "Also incorporated API calls to Firebase for efficient data retrieval and storage.",
+                "To connect via Guest Login: Room: 1001, Last Name: Smith",
+                "To connect via Access Code Login: 123456 or 111111"
             ],
             "url": {
                 "visit": "https://captive-next.vercel.app/",
