@@ -6,8 +6,8 @@
         "scroll_top": "click to go back to top",
         "zoom": "Click / Touch again to zoom out"
     },
-    "visit": "Visit",
-    "code": "Code",
+    "visit": "Visit Page",
+    "code": "Check my Code",
     "icons": {
         "chevron_left": "fa-solid fa-chevron-left",
         "chevron_right": "fa-solid fa-chevron-right",
@@ -72,28 +72,35 @@
     },
     "projects": [
         {
-            "title": "Captive Portal Templates",
-            "ref": "captive",
-            "count": 8,
+            "title": "Multi Page Captive Portal",
+            "ref": "captive_next",
+            "count": 4,
             "list": [
-                "Collection of some of the Captive Portals I developed and maintained from my time with Intertouch."
+                "Aimed to showcase a streamlined login experience through different login options.",
+                "Developed under TypeScript and Next.js focusing on multi page layout and data persistence between pages.",
+                "Also incorporated API calls to Firebase for efficient data retrieval and storage."
             ],
-            "stack": "HTML5, CSS3, Bootstrap 4/5, jQuery and Handlebars"
+            "url": {
+                "visit": "https://captive-next.vercel.app/",
+                "target": "_blank",
+                "code": "https://github.com/edxen/captive_next"
+            },
+            "stack": "HTML5, TypeScript, Next.js, and Styled Components (CSS-in-JS)"
         },
         {
-            "title": "Captive Portal Template Demo",
+            "title": "Single Page Captive Portal",
             "ref": "captivedemo",
             "count": 3,
             "list": [
-                "Captive Portal Demo to demonstrate user flow of typical Captive Portal with focus on Access Codes.",
-                "Support multiple languages (based from Google Translate) and utilizes LocalSupport to simulate connected status even after browser reload "
+                "Aimed to showcase a straightforward login experience with access code",
+                "Demonstrating support for multiple languages (based from Google Translate) while also utilizing LocalSupport to simulate connected status even after browser reload"
             ],
             "url": {
                 "visit": "https://edxen.github.io/captive_portal",
                 "target": "_blank",
                 "code": "https://github.com/edxen/captive_portal"
             },
-            "stack": "HTML5, Tailwind, and React JS"
+            "stack": "HTML5, ReactJS, and Tailwind"
         },
         {
             "title": "Intertouch Passpoint Guest Account Portal Demo ",
@@ -110,6 +117,15 @@
             "stack": "HTML5, Bootstrap 5.2, and Handlebars"
         },
         {
+            "title": "Captive Portal Templates",
+            "ref": "captive",
+            "count": 8,
+            "list": [
+                "Collection of some of the Captive Portals I developed and maintained from my time with Intertouch."
+            ],
+            "stack": "HTML5, CSS3, Bootstrap 4/5, jQuery and Handlebars"
+        },
+        {
             "title": "Food Management App",
             "ref": "food",
             "count": 6,
@@ -120,14 +136,15 @@
             "stack": "HTML5, CSS3, Bootstrap 5.2, and React JS"
         },
         {
-            "title": "Untitle Life RPG",
+            "title": "Nowhere But Up (coming not really soon)",
             "ref": "game",
             "count": 6,
             "list": [
-                "Live in the city, study, find a job and get at the top, hopefully.",
-                "It's a solo indie game project i'm doing whenever I have free time."
+                "A pixel art game where you work, study, train and fight card battles",
+                "It's a game project i've been solo developing, mainly under HTML5 Canvas with Javascript following OOP principle.",
+                "Pixel art assets are drawn in Aseprite."
             ],
-            "stack": "HTML5 Canvas, CSS3, Javascript Vanilla, and Pixel Art"
+            "stack": "HTML5 Canvas, CSS3, JavaScript Vanilla, and Aseprite"
         },
         {
             "title": "Web Resume",
