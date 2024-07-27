@@ -84,6 +84,23 @@ const texts = {
     experience: {
         title: 'Professional Experience',
         org: {
+            "kunda_house":{
+                "who": "Kunda House",
+                "where": "Birmingham, B7 4BB, United Kingdom",
+                "roles": [
+                    {
+                        "title": "Front End Developer",
+                        "duration": "January 2024 to Present",
+                        "list": [
+                            "Lead the development and integration of new features and content for our in-house website, ensuring seamless functionality and user experience.",
+                            "Collaborate directly with the founder to evaluate and implement innovative solutions and improvements.",
+                            "Work closely with the design team to enhance the visual appeal and user interface of web pages.",
+                            "Partner with backend and AI teams to ensure efficient data flow and feature implementation.",
+                            "Oversee the deployment pipeline, managing processes from local development to staging and production environments."
+                        ]
+                    }
+                ]
+            },
             intertouch: {
                 who: 'Intertouch Business Solutions Inc.',
                 where: 'BGC, Taguig City',
