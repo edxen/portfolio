@@ -1,251 +1,276 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
+  <head>
     <title>Ed Aboga - Web Developer Resume</title>
-    <meta name="description"
-        content="Skilled Web Developer experienced with front-end technologies , proficient in HTML, CSS, JavaScript, and various frameworks. Proven track record in developing responsive and user-friendly websites, optimizing performance, and collaborating in cross-functional teams.">
-    <meta name="keywords"
-        content="Web Developer, HTML, CSS, JavaScript, TypeScript, React.JS, Next.JS, Node.JS, Front-end, Responsive Design, Web Development, Team Collaboration">
-    <meta name="author" content="Eduardo Aboga Jr">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="./assets/fa/css/all.min.css">
+    <meta
+      name="description"
+      content="Skilled Web Developer experienced with front-end technologies , proficient in HTML, CSS, JavaScript, and various frameworks. Proven track record in developing responsive and user-friendly websites, optimizing performance, and collaborating in cross-functional teams."
+    />
+    <meta name="keywords" content="Web Developer, HTML, CSS, JavaScript, TypeScript, React.JS, Next.JS, Node.JS, Front-end, Responsive Design, Web Development, Team Collaboration" />
+    <meta name="author" content="Eduardo Aboga Jr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="./assets/fa/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
 
     <style type="text/tailwindcss">
-        @layer utilities {
-            hr { @apply my-3 }
-            ul>li { @apply flex items-center }
-            ul>li>i { @apply pr-2 text-gray-700 }
-            ul>li.multi-line { @apply items-start }
-            ul>li.multi-line>i { @apply pt-0.5 px-1 }
-            .pro-xp { @apply pl-0 }
-            .pro-xp>* { @apply ml-5 mr-9 }
-            .pro-xp>.last { @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg }
-            .pro-xp hr { @apply my-2 }
-            .last>hr { @apply border-slate-400 }
-            ::-webkit-scrollbar { @apply w-[10px] }
-            ::-webkit-scrollbar-track { @apply bg-white}
-            ::-webkit-scrollbar-thumb { @apply bg-gray-700 }
-            ::-webkit-scrollbar-thumb:hover { @apply bg-purple-800 }
+      @layer utilities {
+        hr {
+          @apply my-3;
         }
-
-        .font-inter {
-            font-family: "Inter"
+        ul > li {
+          @apply flex items-center;
         }
+        ul > li > i {
+          @apply pr-2 text-gray-700;
+        }
+        ul > li.multi-line {
+          @apply items-start;
+        }
+        ul > li.multi-line > i {
+          @apply pt-0.5 px-1;
+        }
+        .pro-xp {
+          @apply pl-0;
+        }
+        .pro-xp > * {
+          @apply ml-5 mr-9;
+        }
+        .pro-xp > .last {
+          @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg;
+        }
+        .pro-xp hr {
+          @apply my-2;
+        }
+        .last > hr {
+          @apply border-slate-400;
+        }
+        ::-webkit-scrollbar {
+          @apply w-[10px];
+        }
+        ::-webkit-scrollbar-track {
+          @apply bg-white;
+        }
+        ::-webkit-scrollbar-thumb {
+          @apply bg-gray-700;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          @apply bg-purple-800;
+        }
+      }
 
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            src: url('./assets/fonts/Inter-Regular.woff2') format('woff2'),
-                url('./assets/fonts/Inter-Regular.woff') format('woff'),
-                url('./assets/fonts/Inter-Regular.ttf') format('truetype'),
-                url('./assets/fonts/Inter-Regular.eot');
-            }
+      .font-inter {
+        font-family: "Inter";
+      }
+
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./assets/fonts/Inter-Regular.woff2") format("woff2"), url("./assets/fonts/Inter-Regular.woff") format("woff"), url("./assets/fonts/Inter-Regular.ttf") format("truetype"),
+          url("./assets/fonts/Inter-Regular.eot");
+      }
     </style>
-</head>
+  </head>
 
-<body class="overflow-x-hidden font-inter">
+  <body class="overflow-x-hidden font-inter">
     <div id="root"></div>
 
     <script id="main-template" type="text/x-handlebars-template">
-        <div class="flex flex-col min-w-[430px] h-screen max-h-screen">
-            <div class="flex justify-center border-b-2 pb-3 mb-3">
-                <div class="flex flex-col max-w-screen-lg">
-                    {{> top }}
-                </div>.
-            </div>
-            <div class="flex min-w-[430px] justify-center h-screen">
-                <div class="flex flex-wrap sm:flex-nowrap basis-full max-w-screen-lg">
-                    {{> right}}
-                    {{> left }}
-                </div>
-            </div>
-        </div>
+      <div class="flex flex-col min-w-[430px] h-screen max-h-screen">
+          <div class="flex justify-center border-b-2 pb-3 mb-3">
+              <div class="flex flex-col max-w-screen-lg">
+                  {{> top }}
+              </div>
+          </div>
+          <div class="flex min-w-[430px] justify-center h-screen">
+              <div class="flex flex-wrap sm:flex-nowrap basis-full max-w-screen-lg">
+                  {{> right}}
+                  {{> left }}
+              </div>
+          </div>
+      </div>
     </script>
 
     <script id="top-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-wrap basis-full items-center p-5 pb-0">
-            {{> basic}}
-            {{> summary}}
-        </div>
+      <div class="flex flex-wrap basis-full items-center p-5 pb-0">
+          {{> basic}}
+          {{> summary}}
+      </div>
     </script>
 
     <script id="basic-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-nowrap mb-5 sm:mb-0 sm:basis-5/12 basis-full flex-col items-left justify-center">
-            <div class="flex flex-col basis-full justify-center">
-                <div class="mb-3">
-                    <div class="text-3xl">{{ name }}</div>
-                    <div class="text-xl">{{ role }}</div>
-                </div>
-                <div class="flex justify-center items-left flex-col text-sm">
-                    {{#each info}}
-                    <div class="flex flex-nowrap items-center pb-1">
-                        <div class="min-w-[20px] text-center {{this.icon}}"></div>
-                        {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
-                        {{else}} {{this.name}}
-                        {{/if}}
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-        </div>
+      <div class="flex flex-nowrap mb-5 sm:mb-0 sm:basis-5/12 basis-full flex-col items-left justify-center">
+          <div class="flex flex-col basis-full justify-center">
+              <div class="mb-3">
+                  <div class="text-3xl">{{ name }}</div>
+                  <div class="text-xl">{{ role }}</div>
+              </div>
+              <div class="flex justify-center items-left flex-col text-sm">
+                  {{#each info}}
+                  <div class="flex flex-nowrap items-center pb-1">
+                      <div class="min-w-[20px] text-center {{this.icon}}"></div>
+                      {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
+                      {{else}} {{this.name}}
+                      {{/if}}
+                  </div>
+                  {{/each}}
+              </div>
+          </div>
+      </div>
     </script>
 
     <script id="summary-partial" type="text/x-handlebars-partial">
-        <div class="flex flex-col items-start basis-full sm:items-end sm:basis-7/12  text-sm">
-            <div class="font-bold">
-                {{summary.title}}
-            </div>
-            <div class="italic text-left sm:text-right">
-                {{#each summary.list}}
-                <p>
-                    {{#if @first}} <i class="fa-solid fa-quote-left"></i>
-                    {{/if}}
-                    {{this}}
-                    {{#if @last}} <i class="fa-solid fa-quote-right"></i>
-                    {{/if}}
-                </p>
-                {{/each}}
-            </div>
-        </div>
+      <div class="flex flex-col items-start basis-full sm:items-end sm:basis-7/12  text-sm">
+          <div class="font-bold">
+              {{summary.title}}
+          </div>
+          <div class="italic text-left sm:text-right">
+              {{#each summary.list}}
+              <p>
+                  {{#if @first}} <i class="fa-solid fa-quote-left"></i>
+                  {{/if}}
+                  {{this}}
+                  {{#if @last}} <i class="fa-solid fa-quote-right"></i>
+                  {{/if}}
+              </p>
+              {{/each}}
+          </div>
+      </div>
     </script>
 
     <script id="left-partial" type="text/x-handlebars-partial">
-        <div class="basis-full sm:basis-5/12 flex flex-col justify-start">
-            <div class="mb-3 px-5">
-                <div class="font-inter font-bold text-lg">Skills</div>
-                <hr class="my-2">
-                {{> skills}}
-                {{> certifications}}
-                {{> courses}}
-            </div>
-        </div>
+      <div class="basis-full sm:basis-5/12 flex flex-col justify-start">
+          <div class="mb-3 px-5">
+              <div class="font-inter font-bold text-lg">Skills</div>
+              <hr class="my-2">
+              {{> skills}}
+              {{> certifications}}
+              {{> courses}}
+          </div>
+      </div>
     </script>
 
     <script id="skills-partial" type="text/x-handlebars-partial">
-        <div class="text-sm">
-            {{#each skills}}
-                <div class="font-bold">{{title}}</div>
-                <ul class="list-inside text-xs">
-                {{> list list=list}}
-                </ul>
-                <hr>
-            {{/each}}
-        </div>
+      <div class="text-sm">
+          {{#each skills}}
+              <div class="font-bold">{{title}}</div>
+              <ul class="list-inside text-xs">
+              {{> list list=list}}
+              </ul>
+              <hr>
+          {{/each}}
+      </div>
     </script>
 
     <script id="certifications-partial" type="text/x-handlebars-partial">
-        {{#with certifications}}
-            <div class="font-inter font-bold text-lg">{{title}}</div>
-            <hr class="my-2">
-            <ul class="list-inside text-xs">
-                {{> list list=list}}
-            </ul>
-            <hr>
-        {{/with}}
+      {{#with certifications}}
+          <div class="font-inter font-bold text-lg">{{title}}</div>
+          <hr class="my-2">
+          <ul class="list-inside text-xs">
+              {{> list list=list}}
+          </ul>
+          <hr>
+      {{/with}}
     </script>
 
     <script id="courses-partial" type="text/x-handlebars-partial">
-        {{#with courses}}
-            <div class="font-inter font-bold text-lg">{{title}}</div>
-            <hr class="my-2">
-            <div class="text-sm">
-                <div class="font-bold">{{what}}</div>
-                <ul class="list-inside text-xs">
-                    <li class="flex multi-line">
-                        <i class="fa-solid fa-minus"></i>
-                        <div class="flex flex-col">
-                            <span>{{where}}</span>
-                            <span>{{when}}</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        {{/with}}
+      {{#with courses}}
+          <div class="font-inter font-bold text-lg">{{title}}</div>
+          <hr class="my-2">
+          <div class="text-sm">
+              <div class="font-bold">{{what}}</div>
+              <ul class="list-inside text-xs">
+                  <li class="flex multi-line">
+                      <i class="fa-solid fa-minus"></i>
+                      <div class="flex flex-col">
+                          <span>{{where}}</span>
+                          <span>{{when}}</span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      {{/with}}
     </script>
 
     <script id="right-partial" type="text/x-handlebars-partial">
-        <div class="basis-full">
-            <div class="pro-xp mb-3">
-                {{#with experience}}
-                    <div class="font-inter font-bold text-lg">{{title}}</div>
-                    <hr class="my-2">
-                    {{> orgs}}
-                {{/with}}
-            </div>
-        </div>
+      <div class="basis-full">
+          <div class="pro-xp mb-3">
+              {{#with experience}}
+                  <div class="font-inter font-bold text-lg">{{title}}</div>
+                  <hr class="my-2">
+                  {{> orgs}}
+              {{/with}}
+          </div>
+      </div>
     </script>
 
     <script id="orgs-partial" type="text/x-handlebars-partial">
-        {{#each org}}
-            <div class="{{#if @first}}last{{/if}} text-sm">
-                <div class="flex flex-wrap">
-                    <div class="flex flex-col sm:flex-row flex-wrap w-full sm:w-fit items-left sm:items-center font-bold">
-                        {{who}}&nbsp
-                        {{#if altWho}}<span class="font-normal w-fit text-xs">(formerly {{altWho}})</span>
-                        {{/if}}
-                    </div>
-                    <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap text-xs">{{where}}</div>
-                </div>
-                <hr class="ml-2">
-                {{> roles}}
-            </div>
-            {{#unless @last}} <hr>
-            {{/unless}}
-        {{/each}}
+      {{#each org}}
+          <div class="{{#if @first}}last{{/if}} text-sm">
+              <div class="flex flex-wrap">
+                  <div class="flex flex-col sm:flex-row flex-wrap w-full sm:w-fit items-left sm:items-center font-bold">
+                      {{who}}&nbsp
+                      {{#if altWho}}<span class="font-normal w-fit text-xs">(formerly {{altWho}})</span>
+                      {{/if}}
+                  </div>
+                  <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap text-xs">{{where}}</div>
+              </div>
+              <hr class="ml-2">
+              {{> roles}}
+          </div>
+          {{#unless @last}} <hr>
+          {{/unless}}
+      {{/each}}
     </script>
 
     <script id="roles-partial" type="text/x-handlebars-partial">
-        {{#each roles}}
-            <div class="flex w-full justify-between flex-wrap pl-2">
-                <div class="flex w-full sm:w-fit items-center font-bold">{{title}}</div>
-                <div class="flex basis-auto items-center justify-start sm:justify-end text-xs">{{duration}}</div>
-                <div class="flex basis-full pl-2">
-                    <ul class="list-inside text-xs pt-2">
-                    {{> list list=list}}
-                    </ul>
-                </div>
-            </div>
-            {{#unless @last}} <hr class="ml-2">
-            {{/unless}}
-        {{/each}}
+      {{#each roles}}
+          <div class="flex w-full justify-between flex-wrap pl-2">
+              <div class="flex w-full sm:w-fit items-center font-bold">{{title}}</div>
+              <div class="flex basis-auto items-center justify-start sm:justify-end text-xs">{{duration}}</div>
+              <div class="flex basis-full pl-2">
+                  <ul class="list-inside text-xs pt-2">
+                  {{> list list=list}}
+                  </ul>
+              </div>
+          </div>
+          {{#unless @last}} <hr class="ml-2">
+          {{/unless}}
+      {{/each}}
     </script>
 
     <script id="list-partial" type="text/x-handlebars-partial">
-        {{#each list}}
-            <li class="multi-line">
-                <i class="fa-solid fa-minus"></i>
-                {{this}}
-            </li>
-        {{/each}}
+      {{#each list}}
+          <li class="multi-line">
+              <i class="fa-solid fa-minus"></i>
+              {{this}}
+          </li>
+      {{/each}}
     </script>
 
     <script src="./assets/handlebars.min-v4.7.8.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        fetch('./assets/data.json')
-            .then(response => response.json())
-            .then(data => setHandlebars(data))
-            .catch(error => console.error('Error fetching the JSON file', error));
+      fetch("./assets/data.json")
+        .then((response) => response.json())
+        .then((data) => setHandlebars(data))
+        .catch((error) => console.error("Error fetching the JSON file", error));
 
-        const setHandlebars = (data) => {
-            const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
-            partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace('-partial', ''), partial.innerHTML));
-            const source = document.querySelector('#main-template').innerHTML;
-            const destination = document.querySelector('#root');
-            destination.innerHTML = Handlebars.compile(source)(data);
-        }
+      const setHandlebars = (data) => {
+        const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
+        partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace("-partial", ""), partial.innerHTML));
+        const source = document.querySelector("#main-template").innerHTML;
+        const destination = document.querySelector("#root");
+        destination.innerHTML = Handlebars.compile(source)(data);
+      };
     </script>
-</body>
-
+  </body>
 </html>
