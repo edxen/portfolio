@@ -12,7 +12,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet" href="./assets/fa/css/all.min.css" />
+    <script>
+      function toggleDarkMode() {
+        const htmlElement = document.documentElement;
+        const iconElement = document.getElementById("themeIcon");
+
+        htmlElement.classList.toggle("dark");
+
+        // Toggle between sun and moon icons
+        if (htmlElement.classList.contains("dark")) {
+          iconElement.classList.remove("fa-moon");
+          iconElement.classList.add("fa-sun");
+        } else {
+          iconElement.classList.remove("fa-sun");
+          iconElement.classList.add("fa-moon");
+        }
+      }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
@@ -44,7 +67,7 @@
           @apply ml-5 mr-9;
         }
         .pro-xp > .last {
-          @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg;
+          @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg dark:bg-white dark:text-black;
         }
         .pro-xp hr {
           @apply my-2;
@@ -64,6 +87,11 @@
         ::-webkit-scrollbar-thumb:hover {
           @apply bg-purple-800;
         }
+        @media print {
+          .no-print {
+            display: none;
+          }
+        }
       }
 
       .font-inter {
@@ -80,7 +108,7 @@
     </style>
   </head>
 
-  <body class="overflow-x-hidden font-inter">
+  <body class="overflow-x-hidden font-inter bg-white dark:bg-black/95 dark:text-white">
     <div id="root"></div>
 
     <script id="main-template" type="text/x-handlebars-template">
@@ -129,7 +157,10 @@
 
     <script id="summary-partial" type="text/x-handlebars-partial">
       <div class="flex flex-col items-start basis-full sm:items-end sm:basis-7/12  text-sm">
-          <div class="font-bold">
+            <button class="dark:text-white text-black/95 no-print" onclick="toggleDarkMode()">
+                <i id="themeIcon" class="fas fa-moon"></i>
+            </button>
+            <div class="font-bold">
               {{summary.title}}
           </div>
           <div class="italic text-left sm:text-right">
