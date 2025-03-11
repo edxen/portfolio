@@ -184,7 +184,7 @@
               <hr class="my-2">
               {{> skills}}
               {{> certifications}}
-              {{> courses}}
+              {{> education}}
           </div>
       </div>
     </script>
@@ -212,10 +212,11 @@
       {{/with}}
     </script>
 
-    <script id="courses-partial" type="text/x-handlebars-partial">
-      {{#with courses}}
+    <script id="education-partial" type="text/x-handlebars-partial">
+      {{#with education}}
           <div class="font-inter font-bold text-lg">{{title}}</div>
           <hr class="my-2">
+          {{#each list}}
           <div class="text-sm">
               <div class="font-bold">{{what}}</div>
               <ul class="list-inside text-xs">
@@ -228,6 +229,8 @@
                   </li>
               </ul>
           </div>
+          {{#unless @last}}<hr>{{/unless}}
+          {{/each}}
       {{/with}}
     </script>
 

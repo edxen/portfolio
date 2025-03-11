@@ -1,168 +1,142 @@
 {
-    "name": "Eduardo Aboga Jr",
-    "role": "Front-end Developer",
-    "info": {
-        "address": {
-            "name": "Pasig City, Philippines",
-            "icon": "fa-solid fa-location-dot"
-        },
-        "phone": {
-            "name": "(+63) 916 412-4024",
-            "icon": "fa-solid fa-phone"
-        },
-        "email": {
-            "name": "edabogajr@gmail.com",
-            "icon": "fa-solid fa-at",
-            "link": "mailto:edabogajr@gmail.com"
-        },
-        "portfolio": {
-            "name": "Portfolio: edxen.github.io/portfolio",
-            "icon": "fa-solid fa-briefcase",
-            "link": "https://edxen.github.io/portfolio"
-        }
+  "name": "Eduardo Aboga Jr",
+  "role": "Front-end Developer",
+  "info": {
+    "address": {
+      "name": "Pasig City, Philippines",
+      "icon": "fa-solid fa-location-dot"
     },
-    "summary": {
-        "title": "Career Summary",
-        "list": [
-            "Solution driven individual with 5 years of professional experience in building responsive and cross-browser compatible captive portals for major hospitality chains and independent brands.",
-            "An analytical problem solver skilled at adapting to new information.",
-            "With strong foundation in customer service, the importance of a job well done is well understood. "
-        ]
+    "phone": {
+      "name": "(+63) 916 412-4024",
+      "icon": "fa-solid fa-phone"
     },
-    "skills": {
-        "web": {
-            "title": "Web Development",
-            "list": [
-                "HTML5, CSS3, Flexbox",
-                "NextJS, ReactJS, Node.js",
-                "TypeScript, JavaScript",
-                "jQuery, Handlebars",
-                "TailwindCSS,",
-                "Bootstrap (3.2/ 5.x)"
-            ]
-        },
-        "project_management": {
-            "title": "Project Management",
-            "list": [
-                "Git, Sourcetree",
-                "Notion, Pivotal Tracker",
-                "Agile Methodology"
-            ]
-        },
-        "also_experienced": {
-            "title": "Also Experienced with",
-            "list": [
-                "Figma",
-                "Adobe Photoshop / Photopea",
-                "C++, MySQL",
-                "npm, Node.JS, REST API",
-                "PHP, Shell Script, jq",
-                "VB, VB.NET",
-                "Google Workspace",
-                "Office Suites (Excel, Access)"
-            ]
-        }
+    "email": {
+      "name": "edabogajr@gmail.com",
+      "icon": "fa-solid fa-at",
+      "link": "mailto:edabogajr@gmail.com"
     },
-    "certifications": {
-        "title": "Certifications",
-        "list": [
-            "Learning Next.js",
-            "TypeScript Essential Training",
-            "PHP Essential Training",
-            "Node.js Essential Training",
-            "Node.js Web Servers, Tests, and Deployment",
-            "Become a RESTful API Developer"
-        ]
-    },
-    "courses": {
-        "title": "Courses",
-        "what": "Programming NCIV",
-        "where": "College of Arts & Sciences of Asia & the Pacific",
-        "when": "Jun - Nov 2012"
-    },
-    "experience": {
-        "title": "Professional Experience",
-        "org": {
-            "kunda_house":{
-                "who": "Kunda House",
-                "where": "Birmingham, B7 4BB, United Kingdom",
-                "roles": [
-                    {
-                        "title": "Front End Developer",
-                        "duration": "Jan 2024 to Present",
-                        "list": [
-                            "Lead the development and integration of new features and content for our in-house website, ensuring seamless functionality and user experience.",
-                            "Collaborate directly with the founder to evaluate and implement innovative solutions and improvements.",
-                            "Work closely with the design team to enhance the visual appeal and user interface of web pages.",
-                            "Partner with backend and AI teams to ensure efficient data flow and feature implementation.",
-                            "Oversee the deployment pipeline, managing processes from local development to staging and production environments."
-                        ]
-                    }
-                ]
-            },
-            "intertouch": {
-                "who": "Intertouch Business Solutions Inc.",
-                "where": "BGC, Taguig City",
-                "roles": [
-                    {
-                        "title": "Senior Web Design and Development Associate",
-                        "duration": "Oct 2019 to January 2023",
-                        "list": [
-                            "Transformed web design drafts into functional API-integrated websites for Cloud-based captive portals, ensuring cross-browser compatibility and responsive design across both web and mobile platforms.",
-                            "Managed multilingual content translation, customized, and updated existing website designs and features to meet client specifications.",
-                            "Collaborated with QA to collect website request or issue data for handover to the backend development team.",
-                            "Guided and supported the web design and graphics team to ensure their queries and deliverables met established standards.",
-                            "Spearheaded enhancements within release cycles to optimize efficiency for the timely delivery of short and long-term goals."
-                        ]
-                    },
-                    {
-                        "title": "Web Design Associate",
-                        "duration": "Apr 2018 to Oct 2019",
-                        "list": [
-                            "Transformed web design mockups into a functional website based on a default template layout, serving as a captive portal for hospitality clients.",
-                            "Oversaw content translation for multiple languages, tailored, and enhanced existing website designs and functionalities in accordance with client requirements.",
-                            "Implemented script injection using JavaScript, enabling greater flexibility and customization in site designs."
-                        ]
-                    },
-                    {
-                        "title": "Technical Support Representative",
-                        "duration": "Dec 2015 to Apr 2018",
-                        "list": [
-                            "Handled inbound calls and responded to emails, aiding users in connecting to the site network.",
-                            "Developed a variety of JavaScript bookmarklets to streamline data collection and simplify URL access into a one-click process.",
-                            "Handpicked as an ad hoc programmer under the Training Department to develop a troubleshooting tool with automated documentation using VB.NET and MySQL."
-                        ]
-                    }
-                ]
-            },
-            "convergys": {
-                "who": "Concentrix",
-                "altWho": "Convergys Philippines",
-                "where": "Shaw Blvd., Mandaluyong City",
-                "roles": [
-                    {
-                        "title": "Technical Support Professional for QuickBooks",
-                        "duration": "Sep 2014 to Mar 2015",
-                        "list": [
-                            "Took inbound calls to assist clients in accounting software familiarization and troubleshooting of software related/user input error"
-                        ]
-                    }
-                ]
-            },
-            "omniglobe": {
-                "who": "Sequential Technology International",
-                "altWho": "Omniglobe Intl.",
-                "where": "Eastwood, Quezon City",
-                "roles": {
-                    "first": {
-                        "title": "Customer Service Representative for AT&T",
-                        "duration": "Dec 2012 to Nov 2013",
-                        "list": [
-                            "Took inbound calls to assist clients in familiarizing with web site experience and account restoration"
-                        ]
-                    }
-                }
-            }
-        }
+    "portfolio": {
+      "name": "Portfolio: edxen.github.io/portfolio",
+      "icon": "fa-solid fa-briefcase",
+      "link": "https://edxen.github.io/portfolio"
     }
+  },
+  "summary": {
+    "title": "Career Summary",
+    "list": [
+      "Solution driven individual with 5 years of professional experience in building responsive and cross-browser compatible captive portals for major hospitality chains and independent brands.",
+      "An analytical problem solver skilled at adapting to new information.",
+      "With strong foundation in customer service, the importance of a job well done is well understood. "
+    ]
+  },
+  "skills": {
+    "web": {
+      "title": "Web Development",
+      "list": ["HTML5, CSS3, Flexbox", "NextJS, ReactJS, Node.js", "TypeScript, JavaScript", "jQuery, Handlebars", "TailwindCSS,", "Bootstrap (3.2/ 5.x)"]
+    },
+    "project_management": {
+      "title": "Project Management",
+      "list": ["Git, Sourcetree", "Notion, Pivotal Tracker", "Agile Methodology"]
+    },
+    "also_experienced": {
+      "title": "Also Experienced with",
+      "list": ["Figma", "Adobe Photoshop / Photopea", "C++, MySQL", "npm, Node.JS, REST API", "PHP, Shell Script, jq", "VB, VB.NET", "Google Workspace", "Office Suites (Excel, Access)"]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "list": [
+      {
+        "what": "Bachelor of Science in Computer Science",
+        "where": "Arellano University Manila",
+        "when": "Graduated: May 2025"
+      },
+      {
+        "what": "Course: Programming NC IV",
+        "where": "College of Arts & Sciences of Asia & the Pacific",
+        "when": "Completed: Nov 2012"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "org": {
+      "kunda_house": {
+        "who": "Kunda House",
+        "where": "Birmingham, B7 4BB, United Kingdom",
+        "roles": [
+          {
+            "title": "Front End Developer",
+            "duration": "Jan 2024 to Feb 2025",
+            "list": [
+              "Lead the development and integration of new features and content for our in-house website, ensuring seamless functionality and user experience.",
+              "Collaborate directly with the founder to evaluate and implement innovative solutions and improvements.",
+              "Work closely with the design team to enhance the visual appeal and user interface of web pages.",
+              "Partner with backend and AI teams to ensure efficient data flow and feature implementation.",
+              "Oversee the deployment pipeline, managing processes from local development to staging and production environments."
+            ]
+          }
+        ]
+      },
+      "intertouch": {
+        "who": "Intertouch Business Solutions Inc.",
+        "where": "BGC, Taguig City",
+        "roles": [
+          {
+            "title": "Senior Web Design and Development Associate",
+            "duration": "Oct 2019 to January 2023",
+            "list": [
+              "Transformed web design drafts into functional API-integrated websites for Cloud-based captive portals, ensuring cross-browser compatibility and responsive design across both web and mobile platforms.",
+              "Managed multilingual content translation, customized, and updated existing website designs and features to meet client specifications.",
+              "Collaborated with QA to collect website request or issue data for handover to the backend development team.",
+              "Guided and supported the web design and graphics team to ensure their queries and deliverables met established standards.",
+              "Spearheaded enhancements within release cycles to optimize efficiency for the timely delivery of short and long-term goals."
+            ]
+          },
+          {
+            "title": "Web Design Associate",
+            "duration": "Apr 2018 to Oct 2019",
+            "list": [
+              "Transformed web design mockups into a functional website based on a default template layout, serving as a captive portal for hospitality clients.",
+              "Oversaw content translation for multiple languages, tailored, and enhanced existing website designs and functionalities in accordance with client requirements.",
+              "Implemented script injection using JavaScript, enabling greater flexibility and customization in site designs."
+            ]
+          },
+          {
+            "title": "Technical Support Representative",
+            "duration": "Dec 2015 to Apr 2018",
+            "list": [
+              "Handled inbound calls and responded to emails, aiding users in connecting to the site network.",
+              "Developed a variety of JavaScript bookmarklets to streamline data collection and simplify URL access into a one-click process.",
+              "Handpicked as an ad hoc programmer under the Training Department to develop a troubleshooting tool with automated documentation using VB.NET and MySQL."
+            ]
+          }
+        ]
+      },
+      "convergys": {
+        "who": "Concentrix",
+        "altWho": "Convergys Philippines",
+        "where": "Shaw Blvd., Mandaluyong City",
+        "roles": [
+          {
+            "title": "Technical Support Professional for QuickBooks",
+            "duration": "Sep 2014 to Mar 2015",
+            "list": ["Took inbound calls to assist clients in accounting software familiarization and troubleshooting of software related/user input error"]
+          }
+        ]
+      },
+      "omniglobe": {
+        "who": "Sequential Technology International",
+        "altWho": "Omniglobe Intl.",
+        "where": "Eastwood, Quezon City",
+        "roles": {
+          "first": {
+            "title": "Customer Service Representative for AT&T",
+            "duration": "Dec 2012 to Nov 2013",
+            "list": ["Took inbound calls to assist clients in familiarizing with web site experience and account restoration"]
+          }
+        }
+      }
+    }
+  }
 }
