@@ -16,7 +16,7 @@
       "link": "mailto:edabogajr@gmail.com"
     },
     "portfolio": {
-      "name": "Portfolio: edxen.github.io/portfolio",
+      "name": "edxen.github.io/portfolio",
       "icon": "fa-solid fa-briefcase",
       "link": "https://edxen.github.io/portfolio"
     }
@@ -24,12 +24,29 @@
   "summary": {
     "title": "Career Summary",
     "list": [
-      "Solution driven individual with 5 years of professional experience in building responsive and cross-browser compatible captive portals for major hospitality chains and independent brands.",
-      "An analytical problem solver skilled at adapting to new information.",
-      "With strong foundation in customer service, the importance of a job well done is well understood. "
+      "Solution driven individual with 5 years of professional experience in building responsive and cross-browser compatible captive portals for major hospitality chains and independent brands, An analytical problem solver skilled at adapting to new information, With strong foundation in customer service, the importance of a job well done is well understood. "
     ]
   },
   "skills": {
+    "title": "Skills",
+    "list": [
+      {
+        "title": "Programming Languages",
+        "list": ["TypeScript", "JavaScript", "Python", "PHP", "Shell Script"]
+      },
+      {
+        "title": "Frontend Development",
+        "list": ["HTML5", "CSS3", "ReactJS", "Next.js", "TailwindCSS", "Bootstrap"]
+      },
+      {
+        "title": "Backend & Databases",
+        "list": ["Node.js", "Spring Boot", "REST API", "MongoDB", "MySQL"]
+      },
+      {
+        "title": "Tools & Workflow",
+        "list": ["Git", "npm", "Notion", "Figma", "Agile Methodology"]
+      }
+    ],
     "web": {
       "title": "Web Development",
       "list": ["HTML5, CSS3, Flexbox", "NextJS, ReactJS, Node.js", "TypeScript, JavaScript", "jQuery, Handlebars", "TailwindCSS,", "Bootstrap (3.2/ 5.x)"]
@@ -49,12 +66,14 @@
       {
         "what": "Bachelor of Science in Computer Science",
         "where": "Arellano University Manila",
-        "when": "Graduated: May 2025"
+        "when": "2025",
+        "achievements": ""
       },
       {
-        "what": "Course: Programming NC IV",
+        "what": "Programming NC IV",
         "where": "College of Arts & Sciences of Asia & the Pacific",
-        "when": "Completed: Nov 2012"
+        "when": "2012",
+        "achievements": "Best in Programming"
       }
     ]
   },
@@ -62,6 +81,7 @@
     "title": "Professional Experience",
     "org": {
       "kunda_house": {
+        "include": true,
         "who": "Kunda House",
         "where": "Birmingham, B7 4BB, United Kingdom",
         "roles": [
@@ -79,7 +99,9 @@
         ]
       },
       "intertouch": {
+        "include": true,
         "who": "Intertouch Business Solutions Inc.",
+        "altWho": "DOCOMO InterTouch Pte. Ltd.",
         "where": "BGC, Taguig City",
         "roles": [
           {
@@ -114,6 +136,7 @@
         ]
       },
       "convergys": {
+        "include": false,
         "who": "Concentrix",
         "altWho": "Convergys Philippines",
         "where": "Shaw Blvd., Mandaluyong City",
@@ -126,6 +149,7 @@
         ]
       },
       "omniglobe": {
+        "include": false,
         "who": "Sequential Technology International",
         "altWho": "Omniglobe Intl.",
         "where": "Eastwood, Quezon City",

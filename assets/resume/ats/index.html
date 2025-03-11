@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Ed Aboga - Web Developer Resume</title>
+    <meta
+      name="description"
+      content="Skilled Web Developer experienced with front-end technologies , proficient in HTML, CSS, JavaScript, and various frameworks. Proven track record in developing responsive and user-friendly websites, optimizing performance, and collaborating in cross-functional teams."
+    />
+    <meta name="keywords" content="Web Developer, HTML, CSS, JavaScript, TypeScript, React.JS, Next.JS, Node.JS, Front-end, Responsive Design, Web Development, Team Collaboration" />
+    <meta name="author" content="Eduardo Aboga Jr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href=".././assets/fa/css/all.min.css" />
+    <script>
+      function toggleDarkMode() {
+        const htmlElement = document.documentElement;
+        const iconElement = document.getElementById("themeIcon");
+
+        htmlElement.classList.toggle("dark");
+
+        // Toggle between sun and moon icons
+        if (htmlElement.classList.contains("dark")) {
+          iconElement.classList.remove("fa-moon");
+          iconElement.classList.add("fa-sun");
+        } else {
+          iconElement.classList.remove("fa-sun");
+          iconElement.classList.add("fa-moon");
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href=".././assets/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href=".././assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-icon-192x192.png" />
+    <link rel="icon" type="image/x-icon" href=".././assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href=".././assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href=".././assets/favicon/site.webmanifest" />
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        hr {
+          @apply my-1.5 h-[2px] w-full;
+        }
+        hr.top {
+          @apply bg-slate-100;
+        }
+        hr.bottom {
+          @apply bg-black;
+        }
+        ul > li {
+          @apply flex items-center;
+        }
+        ul > li > i {
+          @apply pr-2 text-gray-700;
+        }
+        ul > li.multi-line {
+          @apply items-start;
+        }
+        ul > li.multi-line > i {
+          @apply pt-0.5 px-1;
+        }
+        .pro-xp {
+          @apply pl-0;
+        }
+        .pro-xp > * {
+          @apply ml-5 mr-9;
+        }
+        .pro-xp > .last {
+          @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg dark:bg-white dark:text-black;
+        }
+        .pro-xp hr {
+          @apply my-2;
+        }
+        .last > hr {
+          @apply border-slate-400;
+        }
+        ::-webkit-scrollbar {
+          @apply w-[10px];
+        }
+        ::-webkit-scrollbar-track {
+          @apply bg-white;
+        }
+        ::-webkit-scrollbar-thumb {
+          @apply bg-gray-700;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          @apply bg-purple-800;
+        }
+        @media print {
+          .no-print {
+            display: none;
+          }
+          .no-print-spacing {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+
+      .font-tinos {
+        font-family: "Tinos";
+      }
+
+      @font-face {
+        font-family: "Tinos";
+        font-style: normal;
+        font-weight: 400;
+        src: url(".././assets/fonts/Tinos-Regular.woff2") format("woff2"), url(".././assets/fonts/Tinos-Regular.woff") format("woff"), url(".././assets/fonts/Tinos-Regular.ttf") format("truetype"),
+          url(".././assets/fonts/Tinos-Regular.eot");
+      }
+    </style>
+  </head>
+
+  <body class="overflow-x-hidden font-tinos bg-white dark:bg-black/95 dark:text-white">
+    <div id="root"></div>
+
+    <script id="main-template" type="text/x-handlebars-template">
+      <div class="flex flex-col sm:items-center items-left min-w-[430px] h-screen max-h-screen">
+        <div class="max-w-screen-lg px-4 no-print-spacing">
+          {{> personal-data}}
+          {{> summary }}
+          {{> experience }}
+          {{> skills }}
+          {{> education }}
+        </div>
+      </div>
+    </script>
+
+    <script id="personal-data-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-col items-center p-4 pb-0 no-print-spacing">
+        <div class="flex flex-col items-center justify-center w-full">
+            {{> dark-mode-toggle}}
+            {{> name-position}}
+            {{> contacts}}
+        </div>
+      </div>
+    </script>
+
+    <script id="name-position-partial" type="text/x-handlebars-partial">
+      <div class="mb-2 text-center">
+        <div class="font-bold text-2xl">{{ name }}</div>
+        <div class="text-lg">{{ role }}</div>
+      </div>
+    </script>
+
+    <script id="contacts-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-wrap justify-center items-left text-sm gap-2 mb-2">
+        {{#each info}}
+          <div class="flex flex-nowrap items-center gap-0.5">
+            <div class=" text-[10px] text-center {{this.icon}}"></div>
+            {{#if this.link}} <a href="{{this.link}}" target="_blank" class="underline">{{this.name}}</a>
+            {{else}} {{this.name}}
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    </script>
+
+    <script id="dark-mode-toggle-partial" type="text/x-handlebars-partial">
+      <div class="relative w-full">
+          <div class="absolute top-0 right-0">
+            <button class="dark:text-white text-black/95 no-print" onclick="toggleDarkMode()">
+              <i id="themeIcon" class="fas fa-moon"></i>
+            </button>
+          </div>
+      </div>
+    </script>
+
+    <script id="title-bar-partial" type="text/x-handlebars-partial">
+      <hr class="top">
+        <div class="text-base font-bold">
+          {{title}}
+        </div>
+      <hr class="bottom">
+    </script>
+
+    <script id="summary-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+          {{> title-bar title=summary.title}}
+          <div class="text-left">
+              {{#each summary.list}}
+              <p>{{this}}</p>
+              {{/each}}
+          </div>
+      </div>
+    </script>
+
+    <script id="experience-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-col items-start w-full text-sm">
+        {{#with experience}}
+          {{> title-bar title=title}}
+          {{> orgs}}
+        {{/with}}
+      </div>
+    </script>
+
+    <script id="skills-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+          {{> title-bar title=skills.title}}
+          <div class="flex flex-col text-left gap-0.5">
+              {{#each skills.list}}
+              <div class="flex">
+                <span class="font-bold">{{this.title}}:&nbsp</span>
+                {{#each this.list}}
+                  <span>{{this}}{{#unless @last}},&nbsp{{/unless}}</span>
+                {{/each}}
+              </div>
+              {{/each}}
+          </div>
+      </div>
+    </script>
+
+    <script id="education-partial" type="text/x-handlebars-partial">
+      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+          {{> title-bar title=education.title}}
+          <div class="flex flex-col text-left gap-0.5">
+              {{#each education.list}}
+              <div class="flex flex-col ">
+                <p class="font-bold">{{this.what}}</p>
+                <p>{{this.where}} • {{this.when}}</p>
+                <p class="empty:hidden">{{this.achievements}}</p>
+              </div>
+              {{/each}}
+          </div>
+      </div>
+    </script>
+
+    <script id="orgs-partial" type="text/x-handlebars-partial">
+      {{#each org}}
+          {{#if this.include}}
+          <div class="text-sm w-full {{#if @last}}mb-2{{/if}}">
+              {{> org-details}}
+              {{> org-roles}}
+          </div>
+          {{/if}}
+      {{/each}}
+    </script>
+
+    <script id="org-details" type="text/x-handlebars-partial">
+      <div class="flex flex-wrap">
+        <div class="flex w-full sm:w-fit items-left sm:items-center font-bold">
+            {{who}}&nbsp
+            {{#if altWho}}<span class="font-normal w-fit text-xs">(formerly {{altWho}})</span>
+            {{/if}}
+        </div>
+        <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap text-xs">
+          <span class="font-bold">{{where}}</span>
+
+          </div>
+      </div>
+    </script>
+
+    <script id="org-roles-partial" type="text/x-handlebars-partial">
+      {{#each roles}}
+          <div class="flex w-full justify-between flex-wrap mb-2">
+              <div class="flex w-full sm:w-fit items-center font-bold">{{title}}</div>
+              <div class="flex basis-auto items-center justify-start sm:justify-end text-xs">{{duration}}</div>
+              <div class="flex basis-full">
+                  <ul class="text-xs">
+                  {{> list list=list}}
+                  </ul>
+              </div>
+          </div>
+      {{/each}}
+    </script>
+
+    <script id="list-partial" type="text/x-handlebars-partial">
+      {{#each list}}
+          <li class="multi-line">
+              <i class="fa-solid fa-circle text-[4px] mt-1"></i>
+              {{this}}
+          </li>
+      {{/each}}
+    </script>
+
+    <script src=".././assets/handlebars.min-v4.7.8.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      fetch(".././assets/data.json")
+        .then((response) => response.json())
+        .then((data) => setHandlebars(data))
+        .catch((error) => console.error("Error fetching the JSON file", error));
+
+      const setHandlebars = (data) => {
+        const partials = document.querySelectorAll('script[type="text/x-handlebars-partial"]');
+        partials.forEach((partial) => Handlebars.registerPartial(partial.id.toString().replace("-partial", ""), partial.innerHTML));
+        const source = document.querySelector("#main-template").innerHTML;
+        const destination = document.querySelector("#root");
+        destination.innerHTML = Handlebars.compile(source)(data);
+      };
+    </script>
+  </body>
+</html>
