@@ -45,6 +45,9 @@
 
     <style type="text/tailwindcss">
       @layer utilities {
+        text-title {
+          @apply text-lg;
+        }
         hr {
           @apply my-1.5 h-[2px] w-full;
         }
@@ -65,18 +68,6 @@
         }
         ul > li.multi-line > i {
           @apply pt-0.5 px-1;
-        }
-        .pro-xp {
-          @apply pl-0;
-        }
-        .pro-xp > * {
-          @apply ml-5 mr-9;
-        }
-        .pro-xp > .last {
-          @apply ml-0 mr-4 pl-5 pr-5 bg-gray-200 py-2 rounded-r-lg dark:bg-white dark:text-black;
-        }
-        .pro-xp hr {
-          @apply my-2;
         }
         .last > hr {
           @apply border-slate-400;
@@ -101,6 +92,18 @@
             padding: 0;
             margin: 0;
           }
+          .text-base {
+            font-size: 12px;
+            line-height: 14px;
+          }
+          .text-lg {
+            font-size: 14px;
+            line-height: 16px;
+          }
+          .text-2xl {
+            font-size: 18px;
+            line-height: 20px;
+          }
         }
       }
 
@@ -122,8 +125,8 @@
     <div id="root"></div>
 
     <script id="main-template" type="text/x-handlebars-template">
-      <div class="flex flex-col sm:items-center items-left min-w-[430px] h-screen max-h-screen">
-        <div class="max-w-screen-lg px-4 no-print-spacing">
+      <div class="flex flex-col sm:items-center items-left min-w-[430px] h-screen max-h-screen text-base">
+        <div class="max-w-screen-lg p-4 no-print-spacing">
           {{> personal-data}}
           {{> summary }}
           {{> experience }}
@@ -134,7 +137,7 @@
     </script>
 
     <script id="personal-data-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-col items-center p-4 pb-0 no-print-spacing">
+      <div class="flex flex-col items-center px-4 pb-0">
         <div class="flex flex-col items-center justify-center w-full">
             {{> dark-mode-toggle}}
             {{> name-position}}
@@ -151,7 +154,7 @@
     </script>
 
     <script id="contacts-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-wrap justify-center items-left text-sm gap-2 mb-2">
+      <div class="flex flex-wrap justify-center items-left gap-2 mb-2">
         {{#each info}}
           <div class="flex flex-nowrap items-center gap-0.5">
             <div class=" text-[10px] text-center {{this.icon}}"></div>
@@ -175,14 +178,14 @@
 
     <script id="title-bar-partial" type="text/x-handlebars-partial">
       <hr class="top">
-        <div class="text-base font-bold">
+        <div class="text-lg font-bold">
           {{title}}
         </div>
       <hr class="bottom">
     </script>
 
     <script id="summary-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+      <div class="flex flex-col items-start basis-full">
           {{> title-bar title=summary.title}}
           <div class="text-left">
               {{#each summary.list}}
@@ -193,7 +196,7 @@
     </script>
 
     <script id="experience-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-col items-start w-full text-sm">
+      <div class="flex flex-col items-start w-full">
         {{#with experience}}
           {{> title-bar title=title}}
           {{> orgs}}
@@ -202,7 +205,7 @@
     </script>
 
     <script id="skills-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+      <div class="flex flex-col items-start basis-full">
           {{> title-bar title=skills.title}}
           <div class="flex flex-col text-left gap-0.5">
               {{#each skills.list}}
@@ -218,15 +221,17 @@
     </script>
 
     <script id="education-partial" type="text/x-handlebars-partial">
-      <div class="flex flex-col items-start basis-full sm:basis-7/12  text-sm">
+      <div class="flex flex-col items-start basis-full">
           {{> title-bar title=education.title}}
           <div class="flex flex-col text-left gap-0.5">
               {{#each education.list}}
+              {{#if this.include}}
               <div class="flex flex-col ">
                 <p class="font-bold">{{this.what}}</p>
                 <p>{{this.where}} • {{this.when}}</p>
                 <p class="empty:hidden">{{this.achievements}}</p>
               </div>
+              {{/if}}
               {{/each}}
           </div>
       </div>
@@ -235,7 +240,7 @@
     <script id="orgs-partial" type="text/x-handlebars-partial">
       {{#each org}}
           {{#if this.include}}
-          <div class="text-sm w-full {{#if @last}}mb-2{{/if}}">
+          <div class="w-full {{#if @last}}mb-2{{/if}}">
               {{> org-details}}
               {{> org-roles}}
           </div>
@@ -247,13 +252,12 @@
       <div class="flex flex-wrap">
         <div class="flex w-full sm:w-fit items-left sm:items-center font-bold">
             {{who}}&nbsp
-            {{#if altWho}}<span class="font-normal w-fit text-xs">(formerly {{altWho}})</span>
+            {{#if altWho}}<span class="font-normal w-fit">(formerly {{altWho}})</span>
             {{/if}}
         </div>
-        <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap text-xs">
-          <span class="font-bold">{{where}}</span>
-
-          </div>
+        <div class="flex w-fit items-center flex-grow justify-start sm:justify-end flex-nowrap">
+          <span>{{where}}</span>
+        </div>
       </div>
     </script>
 
@@ -261,9 +265,9 @@
       {{#each roles}}
           <div class="flex w-full justify-between flex-wrap mb-2">
               <div class="flex w-full sm:w-fit items-center font-bold">{{title}}</div>
-              <div class="flex basis-auto items-center justify-start sm:justify-end text-xs">{{duration}}</div>
+              <div class="flex basis-auto items-center justify-start sm:justify-end">{{duration}}</div>
               <div class="flex basis-full">
-                  <ul class="text-xs">
+                  <ul class="">
                   {{> list list=list}}
                   </ul>
               </div>
