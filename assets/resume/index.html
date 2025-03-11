@@ -180,10 +180,10 @@
     <script id="left-partial" type="text/x-handlebars-partial">
       <div class="basis-full sm:basis-5/12 flex flex-col justify-start">
           <div class="mb-3 px-5">
-              <div class="font-inter font-bold text-lg">Skills</div>
+              <div class="font-inter font-bold text-lg">{{skills.title}}</div>
               <hr class="my-2">
               {{> skills}}
-              {{> certifications}}
+              <hr class="my-2">
               {{> education}}
           </div>
       </div>
@@ -196,7 +196,6 @@
               <ul class="list-inside text-xs">
               {{> list list=list}}
               </ul>
-              <hr>
           {{/each}}
       </div>
     </script>
@@ -229,7 +228,6 @@
                   </li>
               </ul>
           </div>
-          {{#unless @last}}<hr>{{/unless}}
           {{/each}}
       {{/with}}
     </script>
